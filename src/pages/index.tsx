@@ -1,6 +1,9 @@
 import React from "react";
-export default class extends React.Component {
+import withLayout from "../template/Layout";
+class Index extends React.Component {
   render() {
     return <div>Hello Next.js</div>;
   }
 }
+
+export default withLayout(Index);
