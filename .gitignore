@@ -23,3 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 /.next
 /sampleTemplate/distribution
+/src/.next
