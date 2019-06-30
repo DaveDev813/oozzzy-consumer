@@ -45,20 +45,21 @@ const BootstrapInput = withStyles(theme => ({
 }))(InputBase);
 
 export const InputField: React.FC<
-  InputProps & { name: string; label?: string }
-> = ({ type, name, label, ...props }) => {
+  InputProps & { name: string; label?: string; value?: string }
+> = ({ type, name, label, value, ...props }) => {
   return (
     <Field
       name={name}
       render={({ form: { errors, handleChange } }: any) => {
         const hasError = errors[name] ? true : false;
+        const withValue = value ? { value, ...props } : { ...props };
         return (
           <FormControl error={hasError} fullWidth>
             <InputLabel style={{ textTransform: "capitalize" }}>
               {label ? label : name}
             </InputLabel>
             <BootstrapInput
-              {...props}
+              {...withValue}
               name={name}
               id={`${name}`}
               onChange={handleChange}

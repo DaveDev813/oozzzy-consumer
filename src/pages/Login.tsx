@@ -21,8 +21,7 @@ class Login extends React.Component {
       email: values.username,
       password: values.password
     });
-    console.log(test);
-    // console.log("buraaat", values);
+    console.log("Testing response", await test.json());
     actions.setSubmitting(false);
     Router.push(`/`); // don't reload page
   };
@@ -60,7 +59,11 @@ class Login extends React.Component {
                       {" "}
                       Email Address
                     </label> */}
-                          <InputField name="username" label="Username" />
+                          <InputField
+                            name="username"
+                            label="Username"
+                            value="qwe@qwe.com"
+                          />
                           {/* <input
                       name="loginUsername"
                       id="loginUsername"
@@ -98,7 +101,11 @@ class Login extends React.Component {
                             data-msg="Please enter your password"
                             className="form-control"
                           /> */}
-                          <InputField name="password" label="Password" />
+                          <InputField
+                            name="password"
+                            label="Password"
+                            value="qqqqqqqqqqq"
+                          />
                         </div>
                         <div className="form-group mb-4">
                           <div className="custom-control custom-checkbox">
