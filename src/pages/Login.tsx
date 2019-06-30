@@ -21,7 +21,7 @@ class Login extends React.Component {
       email: values.username,
       password: values.password
     });
-    console.log("buraaat", test);
+    console.log("Testing response", await test.json());
     actions.setSubmitting(false);
     Router.push(`/`); // don't reload page
   };
