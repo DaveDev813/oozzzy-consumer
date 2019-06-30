@@ -22,7 +22,9 @@ async function apiHelper(
   let options: any = {
     method,
     headers: {
-      Authorization: "bearer " + accessToken
+      Authorization: "bearer " + accessToken,
+      "Access-Control-Allow-Credentials": "true",
+      credentials: "include"
     }
   };
 
@@ -40,9 +42,7 @@ async function apiHelper(
   } else if (method === HttpProtocol.POST || method === HttpProtocol.PUT) {
     const headers = {
       ...options.headers,
-      "content-type": "application/json",
-      "Access-Control-Allow-Credentials": "true",
-      credentials: "include"
+      "content-type": "application/json"
     };
     options = {
       ...options,

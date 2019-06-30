@@ -128,13 +128,21 @@ class Login extends React.Component {
                           data-content="OR"
                           className="my-3 hr-text letter-spacing-2"
                         />
-                        <button className="btn btn btn-outline-primary btn-block btn-social mb-3">
+                        <button
+                          onClick={async () => {
+                            // TESTING SIGNOUT
+                            const test = await Api.post("/client/signout");
+
+                            console.log("test", test);
+                          }}
+                          className="btn btn btn-outline-primary btn-block btn-social mb-3"
+                        >
                           <i className="fa-2x fa-facebook-f fab btn-social-icon">
                             {" "}
                           </i>
                           Connect
                           <span className="d-none d-sm-inline">
-                            with Facebook
+                            with Facebook SIGN OUT TEST
                           </span>
                         </button>
                         <button className="btn btn btn-outline-muted btn-block btn-social mb-3">
