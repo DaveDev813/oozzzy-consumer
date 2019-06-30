@@ -5,6 +5,7 @@ import { InputField } from "../components/Input";
 import * as Yup from "yup";
 import { FormikActions, Formik } from "formik";
 import Router from "next/router";
+import Api from "../service/api";
 
 const LoginSchema = Yup.object().shape({
   username: Yup.string()
@@ -15,8 +16,13 @@ const LoginSchema = Yup.object().shape({
 });
 
 class Login extends React.Component {
-  public onSubmit = (values: any, actions: FormikActions<any>) => {
-    console.log("buraaat", values);
+  public onSubmit = async (values: any, actions: FormikActions<any>) => {
+    const test = await Api.post("/client/signin", {
+      email: values.username,
+      password: values.password
+    });
+    console.log(test);
+    // console.log("buraaat", values);
     actions.setSubmitting(false);
     Router.push(`/`); // don't reload page
   };
