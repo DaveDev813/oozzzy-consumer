@@ -41,12 +41,13 @@ async function apiHelper(
   } else if (method === HttpProtocol.POST || method === HttpProtocol.PUT) {
     const headers = {
       ...options.headers,
-      "credentials": "include",
       "content-type": "application/json"
     };
     options = {
       ...options,
       headers,
+      mode : "cors",
+      credentials: "include",
       body: JSON.stringify(payload)
     };
   }
