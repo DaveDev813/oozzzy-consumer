@@ -3,8 +3,9 @@ import "../static/sampleTemplate/distribution/pages/css/style.default.css";
 import "../static/sampleTemplate/distribution/pages/css/custom.css";
 import "../static/sampleTemplate/distribution/pages/vendor/magnific-popup/magnific-popup.css";
 import "../static/sampleTemplate/distribution/pages/img/favicon.png";
+import Link from "next/link";
 
-const SvgUse: React.FC<{ hrefVal: string; className: string }> = ({
+export const SvgUse: React.FC<{ hrefVal: string; className: string }> = ({
   hrefVal,
   className
 }) => {
@@ -127,7 +128,7 @@ const navItem: BasicCollapseType[] = [
   },
   {
     title: "Sign in",
-    link: "#",
+    link: "/login",
     isEnabled: true,
     type: HeaderCollapse.SINGLE,
     isActive: false
@@ -160,9 +161,9 @@ const BasicCollapse: React.FC<BasicCollapseType> = ({
           }`}
         >
           {type === HeaderCollapse.SINGLE ? (
-            <a href={link} className="nav-link">
-              {title}
-            </a>
+            <Link href={link}>
+              <a className="nav-link">{title}</a>
+            </Link>
           ) : (
             <React.Fragment>
               <a
