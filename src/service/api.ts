@@ -22,15 +22,14 @@ async function apiHelper(
   let options: any = {
     method,
     headers: {
-      Authorization: "bearer " + accessToken,
-      "Access-Control-Allow-Credentials": "true",
-      credentials: "include"
-    }
+      "Access-Control-Allow-Credentials":true,
+      Authorization: "Bearer " + accessToken,
+    },
+    mode :'cors',
+    credentials: "include"
   };
 
-  const payload = {
-    _d: jwt.sign(params, appToken)
-  };
+  const payload = { _d: jwt.sign(params, appToken) };
 
   if (method === HttpProtocol.GET || method === HttpProtocol.DELETE) {
     const qs = Object.keys(params)
@@ -42,6 +41,7 @@ async function apiHelper(
   } else if (method === HttpProtocol.POST || method === HttpProtocol.PUT) {
     const headers = {
       ...options.headers,
+      "credentials": "include",
       "content-type": "application/json"
     };
     options = {
