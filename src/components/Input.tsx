@@ -55,18 +55,17 @@ export const InputField: React.FC<
         const withValue = value ? { value, ...props } : { ...props };
         return (
           <FormControl error={hasError} fullWidth>
-            <InputLabel style={{ textTransform: "capitalize" }}>
+            <label htmlFor={name} className="form-label">
               {label ? label : name}
-            </InputLabel>
-            <BootstrapInput
-              {...withValue}
+            </label>
+            <input
               name={name}
               id={`${name}`}
-              onChange={handleChange}
-              aria-describedby="component-error-text"
               type={type ? type : "input"}
-              autoComplete={name}
-              placeholder={label}
+              // placeholder={label}
+              autoComplete="off"
+              className="form-control"
+              onChange={handleChange}
             />
             {errors[name] && (
               <FormHelperText id="component-error-text">

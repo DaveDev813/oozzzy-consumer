@@ -17,6 +17,7 @@ const LoginSchema = Yup.object().shape({
 
 class Login extends React.Component {
   public onSubmit = async (values: any, actions: FormikActions<any>) => {
+    console.log("bayag");
     const test = await Api.post("/client/signin", {
       email: values.username,
       password: values.password
@@ -59,11 +60,7 @@ class Login extends React.Component {
                       {" "}
                       Email Address
                     </label> */}
-                          <InputField
-                            name="username"
-                            label="Username"
-                            value="qwe@qwe.com"
-                          />
+                          <InputField name="username" label="Username" />
                           {/* <input
                       name="loginUsername"
                       id="loginUsername"
@@ -101,11 +98,7 @@ class Login extends React.Component {
                             data-msg="Please enter your password"
                             className="form-control"
                           /> */}
-                          <InputField
-                            name="password"
-                            label="Password"
-                            value="qqqqqqqqqqq"
-                          />
+                          <InputField name="password" label="Password" />
                         </div>
                         <div className="form-group mb-4">
                           <div className="custom-control custom-checkbox">
