@@ -48,7 +48,7 @@ export default class MyDocument extends Document {
             id="theme-stylesheet"
           />
           <Head>
-            <style>{`body { margin: 0 } /* custom! */`}</style>
+            <style>{`body { padding-top: 72px; margin: 0 } /* custom! */`}</style>
           </Head>
         </head>
         <body className="app">
