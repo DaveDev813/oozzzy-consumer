@@ -135,7 +135,7 @@ const navItem: BasicCollapseType[] = [
   },
   {
     title: "Sign up",
-    link: "#",
+    link: "signup",
     isEnabled: true,
     type: HeaderCollapse.SINGLE,
     isActive: false
