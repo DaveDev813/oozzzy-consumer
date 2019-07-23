@@ -3,7 +3,7 @@ import withLayout from "../template/Layout";
 class Index extends React.Component {
   render() {
     return (
-      <div className="mainContainer">
+      <div className="mainContainerTest">
         <section className="hero-home">
           <div className="swiper-container hero-slider">
             <div className="swiper-wrapper dark-overlay">
