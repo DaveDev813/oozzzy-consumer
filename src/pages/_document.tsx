@@ -47,9 +47,7 @@ export default class MyDocument extends Document {
             href="../static/sampleTemplate/distribution/dist/css/style.default.css"
             id="theme-stylesheet"
           />
-          <Head>
-            <style>{`body { padding-top: 72px; margin: 0 } /* custom! */`}</style>
-          </Head>
+          <Head />
         </head>
         <body className="app">
           <Main />
