@@ -12,6 +12,16 @@ import {
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Rate from "../components/Rate";
+import {
+  InputLabel,
+  InputBase,
+  NativeSelect,
+  withStyles,
+  FormControl,
+  Select,
+  MenuItem,
+  makeStyles
+} from "@material-ui/core";
 
 const CardData = () => {
   return [
@@ -130,158 +140,340 @@ const CardData2 = () => {
   ];
 };
 
-const Dashboard = () => (
-  <>
-    <section className="py-6 bg-white">
-      <Container>
-        <Row className="mb-5">
-          <div className="col-md-8">
-            <p className="subtitle text-primary">Stay and eat like a local</p>
-            <h2>Categories</h2>
+// const BootstrapInput = withStyles(theme => ({
+//   root: {
+//     "label + &": {
+//       marginTop: theme.spacing(3)
+//     }
+//   },
+//   input: {
+//     borderRadius: 4,
+//     position: "relative",
+//     backgroundColor: theme.palette.background.paper,
+//     border: "1px solid #ced4da",
+//     fontSize: 16,
+//     padding: "10px 26px 10px 12px",
+//     transition: theme.transitions.create(["border-color", "box-shadow"]),
+//     // Use the system font instead of the default Roboto font.
+//     fontFamily: [
+//       "-apple-system",
+//       "BlinkMacSystemFont",
+//       '"Segoe UI"',
+//       "Roboto",
+//       '"Helvetica Neue"',
+//       "Arial",
+//       "sans-serif",
+//       '"Apple Color Emoji"',
+//       '"Segoe UI Emoji"',
+//       '"Segoe UI Symbol"'
+//     ].join(","),
+//     "&:focus": {
+//       borderRadius: 4,
+//       borderColor: "#80bdff",
+//       boxShadow: "0 0 0 0.2rem rgba(0,123,255,.25)"
+//     }
+//   }
+// }))(InputBase);
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    display: "flex",
+    flexWrap: "wrap"
+  },
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2)
+  }
+}));
+
+const Dashboard = () => {
+  return (
+    <>
+      <section className="hero-home">
+        <div className="swiper-container hero-slider">
+          <div className="swiper-wrapper dark-overlay">
+            <div
+              style={{
+                backgroundImage:
+                  "url('/static/sampleTemplate/distribution/dist/img/photo/photo-1501621965065-c6e1cf6b53e2.jpg')"
+              }}
+              className="swiper-slide"
+            />
+            <div
+              style={{
+                backgroundImage:
+                  "url('/static/sampleTemplate/distribution/dist/img/photo/photo-1519974719765-e6559eac2575.jpg')"
+              }}
+              className="swiper-slide"
+            />
+            <div
+              style={{
+                backgroundImage:
+                  "url('/static/sampleTemplate/distribution/dist/img/photo/photo-1490578474895-699cd4e2cf59.jpg')"
+              }}
+              className="swiper-slide"
+            />
+            <div
+              style={{
+                backgroundImage:
+                  "url('/static/sampleTemplate/distribution/dist/img/photo/photo-1534850336045-c6c6d287f89e.jpg')"
+              }}
+              className="swiper-slide"
+            />
           </div>
-          <div className="col-md-4 d-lg-flex align-items-center justify-content-end">
-            <a href="category.html" className="text-muted text-sm">
-              See all guides
-              <i className="fas fa-angle-double-right ml-2" />
-            </a>
-          </div>
-        </Row>
-        <Row>
-          <div id="swiper1" className="swiper-container guides-slider">
-            <div className="swiper-wrapper pb-5">
-              {CardData().map((dataInfo, index) => {
-                // const active = index == 0 ? "swiper-slide-active" : "";
-                return (
-                  <div key={index} className={`swiper-slide h-auto px-2`}>
-                    <Card>
-                      <CardTile href="category.html" />
-                      <Avatar
-                        src={`/static/photo/${dataInfo.place}.jpg`}
-                        alt="Card image"
-                        className="bg-image"
+        </div>
+        <Container className="py-6 py-md-7 text-white z-index-20">
+          <Row>
+            <div className="col-xl-10">
+              <div className="text-center text-lg-left">
+                <p className="subtitle letter-spacing-4 mb-2 text-secondary text-shadow">
+                  The best holiday experience
+                </p>
+                <h1 className="display-3 font-weight-bold text-shadow">
+                  Stay like a local
+                </h1>
+              </div>
+              <div className="search-bar mt-5 p-3 p-lg-1 pl-lg-4">
+                <form action="#">
+                  <Row>
+                    <div className="col-lg-4 d-flex align-items-center form-group">
+                      <InputBase
+                        type="text"
+                        name="search"
+                        placeholder="What are you searching for?"
+                        className="form-control border-0 shadow-0"
                       />
-                      <CardBody className="overlay-content">
-                        <CardTitle className="text-shadow text-uppercase">
-                          {dataInfo.place}
-                        </CardTitle>
-                        <CardText size="sm">{dataInfo.text}</CardText>
-                      </CardBody>
-                    </Card>
+                      >
+                    </div>
+                    <div className="col-lg-3 d-flex align-items-center form-group">
+                      <div className="input-label-absolute input-label-absolute-right w-100">
+                        <InputLabel
+                          htmlFor="location"
+                          className="label-absolute"
+                        >
+                          <i className="fa fa-crosshairs" />
+                          <span className="sr-only">City</span>
+                        </InputLabel>
+                        <InputBase
+                          type="text"
+                          name="location"
+                          placeholder="Location"
+                          id="location"
+                          className="form-control border-0 shadow-0"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-3 d-flex align-items-center form-group no-divider">
+                      <FormControl>
+                        <InputLabel htmlFor="categories">Categories</InputLabel>
+                        <Select
+                          value=""
+                          // onChange={handleChange}
+                          inputProps={{
+                            name: "categories",
+                            id: "categories"
+                          }}
+                          style={{ width: 220 }}
+                        >
+                          <MenuItem value="small">Restaurants</MenuItem>
+                          <MenuItem value="medium">Hotels</MenuItem>
+                          <MenuItem value="large">Cafes</MenuItem>
+                          <MenuItem value="x-large">Garages</MenuItem>
+                        </Select>
+                      </FormControl>
+                      {/* <FormControl>
+                      <InputLabel htmlFor="categories">Categories</InputLabel>
+                      <Select
+                        native
+                        // value={state.age}
+                        // onChange={handleChange('age')}
+                        inputProps={{
+                          name: "age",
+                          id: "categories"
+                        }}
+                      >
+                        <option value="" />
+                        <option value="small">Restaurants</option>
+                        <option value="medium">Hotels</option>
+                        <option value="large">Cafes</option>
+                        <option value="x-large">Garages</option>
+                      </Select>
+                    </FormControl> */}
+                    </div>
+                    <div className="col-lg-2">
+                      <button
+                        type="submit"
+                        className="btn btn-primary btn-block rounded-xl h-100"
+                      >
+                        Search{" "}
+                      </button>
+                    </div>
+                  </Row>
+                </form>
+              </div>
+            </div>
+          </Row>
+        </Container>
+      </section>
+
+      <section className="py-6 bg-white">
+        <Container>
+          <Row className="mb-5">
+            <div className="col-md-8">
+              <p className="subtitle text-primary">Stay and eat like a local</p>
+              <h2>Categories</h2>
+            </div>
+            <div className="col-md-4 d-lg-flex align-items-center justify-content-end">
+              <a href="category.html" className="text-muted text-sm">
+                See all guides
+                <i className="fas fa-angle-double-right ml-2" />
+              </a>
+            </div>
+          </Row>
+          <Row>
+            <div id="swiper1" className="swiper-container guides-slider">
+              <div className="swiper-wrapper pb-5">
+                {CardData().map((dataInfo, index) => {
+                  // const active = index == 0 ? "swiper-slide-active" : "";
+                  return (
+                    <div key={index} className={`swiper-slide h-auto px-2`}>
+                      <Card>
+                        <CardTile href="category.html" />
+                        <Avatar
+                          src={`/static/photo/${dataInfo.place}.jpg`}
+                          alt="Card image"
+                          className="bg-image"
+                        />
+                        <CardBody className="overlay-content">
+                          <CardTitle className="text-shadow text-uppercase">
+                            {dataInfo.place}
+                          </CardTitle>
+                          <CardText size="sm">{dataInfo.text}</CardText>
+                        </CardBody>
+                      </Card>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </Row>
+        </Container>
+      </section>
+      {/* Last Minute Deals Below  */}
+
+      <section className="py-6 bg-gray-100">
+        <Container>
+          <Row className="mb-5">
+            <div className="col-md-8">
+              <p className="subtitle text-secondary">
+                Hurry up, these are expiring soon.{" "}
+              </p>
+              <h2>Last minute deals</h2>
+            </div>
+            <div className="col-md-4 d-lg-flex align-items-center justify-content-end">
+              <a href="category.html" className="text-muted text-sm">
+                See all deals
+                <i className="fas fa-angle-double-right ml-2" />
+              </a>
+            </div>
+          </Row>
+          <div
+            id="swiper2"
+            className="swiper-container swiper-container-mx-negative swiper-init"
+          >
+            <div className="swiper-wrapper pb-5">
+              {CardData2().map((details, index) => {
+                return (
+                  <div key={index} className="swiper-slide h-auto px-2">
+                    {/* <!-- place item--> */}
+                    <div className="w-100 h-100">
+                      <div className="card h-100 border-0 shadow">
+                        <CardImg
+                          className="overflow-hidden gradient-overlay"
+                          position="top"
+                        >
+                          <Avatar
+                            src="/static/sampleTemplate/distribution/pages/img/photo/photo-1484154218962-a197022b5858.jpg"
+                            alt={details.user.room.description}
+                            className="img-fluid"
+                          />
+                          <CardTile href="detail-rooms.html" />
+                          <CardImg
+                            overlay
+                            position="bottom"
+                            className="z-index-20"
+                          >
+                            <div className="media text-white text-sm align-items-center">
+                              <Avatar
+                                src={details.user.src}
+                                alt="Pamela"
+                                className="avatar avatar-border-white mr-2"
+                              />
+                              <div className="media-body">
+                                {details.user.name}
+                              </div>
+                            </div>
+                          </CardImg>
+                          <CardImg
+                            overlay
+                            position="top"
+                            className="text-right"
+                          >
+                            <a
+                              href="javascript: void();"
+                              className="card-fav-icon position-relative z-index-40"
+                            >
+                              HEART
+                              {/* <svg className="svg-icon text-white">
+                          <use xlink: href="#heart-1"></use>
+                        </svg> */}
+                            </a>
+                          </CardImg>
+                        </CardImg>
+                        <CardBody className="d-flex align-items-center">
+                          <div className="w-100">
+                            <CardTitle>
+                              <a
+                                href="detail-rooms.html"
+                                className="text-decoration-none text-dark"
+                              >
+                                {details.user.room.description}
+                              </a>
+                            </CardTitle>
+                            <CardSubtitle>
+                              <p className="flex-grow-1 mb-0 text-muted text-sm">
+                                {details.user.room.type}
+                              </p>
+                              <p className="flex-shrink-1 mb-0 card-stars text-xs text-right">
+                                {/* {Stars(details.user.room.stars)} */}
+
+                                {/* <Rate rate={details.user.room.stars} /> */}
+                              </p>
+                            </CardSubtitle>
+                            <CardText muted>
+                              <span className="h4 text-primary">
+                                {details.user.room.price}
+                              </span>{" "}
+                              per night
+                            </CardText>
+                          </div>
+                        </CardBody>
+                      </div>
+                    </div>
                   </div>
                 );
               })}
+
+              <div className="swiper-pagination2" />
             </div>
           </div>
-        </Row>
-      </Container>
-    </section>
-    {/* Last Minute Deals Below  */}
-
-    <section className="py-6 bg-gray-100">
-      <Container>
-        <Row className="mb-5">
-          <div className="col-md-8">
-            <p className="subtitle text-secondary">
-              Hurry up, these are expiring soon.{" "}
-            </p>
-            <h2>Last minute deals</h2>
-          </div>
-          <div className="col-md-4 d-lg-flex align-items-center justify-content-end">
-            <a href="category.html" className="text-muted text-sm">
-              See all deals
-              <i className="fas fa-angle-double-right ml-2" />
-            </a>
-          </div>
-        </Row>
-        <div
-          id="swiper2"
-          className="swiper-container swiper-container-mx-negative swiper-init"
-        >
-          <div className="swiper-wrapper pb-5">
-            {CardData2().map((details, index) => {
-              return (
-                <div key={index} className="swiper-slide h-auto px-2">
-                  {/* <!-- place item--> */}
-                  <div className="w-100 h-100">
-                    <div className="card h-100 border-0 shadow">
-                      <CardImg
-                        className="overflow-hidden gradient-overlay"
-                        position="top"
-                      >
-                        <Avatar
-                          src="/static/sampleTemplate/distribution/pages/img/photo/photo-1484154218962-a197022b5858.jpg"
-                          alt={details.user.room.description}
-                          className="img-fluid"
-                        />
-                        <CardTile href="detail-rooms.html" />
-                        <CardImg
-                          overlay
-                          position="bottom"
-                          className="z-index-20"
-                        >
-                          <div className="media text-white text-sm align-items-center">
-                            <Avatar
-                              src={details.user.src}
-                              alt="Pamela"
-                              className="avatar avatar-border-white mr-2"
-                            />
-                            <div className="media-body">
-                              {details.user.name}
-                            </div>
-                          </div>
-                        </CardImg>
-                        <CardImg overlay position="top" className="text-right">
-                          <a
-                            href="javascript: void();"
-                            className="card-fav-icon position-relative z-index-40"
-                          >
-                            HEART
-                            {/* <svg className="svg-icon text-white">
-                          <use xlink: href="#heart-1"></use>
-                        </svg> */}
-                          </a>
-                        </CardImg>
-                      </CardImg>
-                      <CardBody className="d-flex align-items-center">
-                        <div className="w-100">
-                          <CardTitle>
-                            <a
-                              href="detail-rooms.html"
-                              className="text-decoration-none text-dark"
-                            >
-                              {details.user.room.description}
-                            </a>
-                          </CardTitle>
-                          <CardSubtitle>
-                            <p className="flex-grow-1 mb-0 text-muted text-sm">
-                              {details.user.room.type}
-                            </p>
-                            <p className="flex-shrink-1 mb-0 card-stars text-xs text-right">
-                              {/* {Stars(details.user.room.stars)} */}
-
-                              <Rate rate={details.user.room.stars} />
-                            </p>
-                          </CardSubtitle>
-                          <CardText muted>
-                            <span className="h4 text-primary">
-                              {details.user.room.price}
-                            </span>{" "}
-                            per night
-                          </CardText>
-                        </div>
-                      </CardBody>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-
-            <div className="swiper-pagination2" />
-          </div>
-        </div>
-      </Container>
-    </section>
-  </>
-);
+        </Container>
+      </section>
+    </>
+  );
+};
 
 export default Dashboard;
