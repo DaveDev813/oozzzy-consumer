@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import Row from '../components/Row';
 import Container from '../components/Container';
 import {
@@ -12,7 +12,19 @@ import {
 import Avatar from '../components/Avatar';
 import Rate from '../components/Rate';
 
-const CardData2 = () => {
+interface Item {
+  user: {
+    src: string;
+    name: string;
+    room: {
+      description: string;
+      type: string;
+      price: string;
+      stars: number;
+    };
+  };
+}
+const CardData2 = (): Item[] => {
   return [
     {
       user: {
@@ -89,7 +101,7 @@ const CardData2 = () => {
   ];
 };
 
-const Featured = () => {
+const Featured: React.FC<any> = (): ReactElement => {
   return (
     <section className="py-6 bg-gray-100">
       <Container>
@@ -112,7 +124,7 @@ const Featured = () => {
           className="swiper-container swiper-container-mx-negative swiper-init"
         >
           <div className="swiper-wrapper pb-5">
-            {CardData2().map((details, index) => {
+            {CardData2().map((details: any, index: any) => {
               return (
                 <div key={index} className="swiper-slide h-auto px-2">
                   {/* <!-- place item--> */}
@@ -144,7 +156,11 @@ const Featured = () => {
                             </div>
                           </div>
                         </CardImg>
-                        <CardImg overlay={true} position="top" className="text-right">
+                        <CardImg
+                          overlay={true}
+                          position="top"
+                          className="text-right"
+                        >
                           <a
                             href="javascript: void();"
                             className="card-fav-icon position-relative z-index-40"
