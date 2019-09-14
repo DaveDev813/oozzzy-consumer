@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 
 const Card = (props: any): ReactElement => (
   <div className="card card-poster gradient-overlay mb-4 mb-lg-0">

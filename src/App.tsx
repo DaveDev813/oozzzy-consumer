@@ -7,6 +7,7 @@ import NotFound from './screens/NotFound';
 import ProtectedScreen from './screens/ProtectedScreen';
 import TestScreen from './screens/TestScreen';
 import Login from './screens/Login';
+import Dashboard from './screens/Dashboard';
 
 const App: React.FC = (): ReactElement => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = (): ReactElement => {
       <CssBaseline>
         <Switch>
           <Route exact={true} path="/" component={Home} />
+          <Route exact={true} path="/home" component={Dashboard} />
           <Route exact={true} path="/signin" component={Login} />
           <Route exact={true} path="/test" component={TestScreen} />
           <Route
