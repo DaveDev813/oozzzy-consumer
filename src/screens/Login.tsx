@@ -73,31 +73,6 @@ class Login extends React.Component {
                     /> */}
                         </div>
                         <div className="form-group mb-4">
-                          {/* <div className="row">
-                            <div className="col">
-                              <label
-                                htmlFor="loginPassword"
-                                className="form-label"
-                              >
-                                {" "}
-                                Password
-                              </label>
-                            </div>
-                            <div className="col-auto">
-                              <a href="#" className="form-text small">
-                                Forgot password?
-                              </a>
-                            </div>
-                          </div>
-                          <input
-                            name="loginPassword"
-                            id="loginPassword"
-                            placeholder="Password"
-                            type="password"
-                            required
-                            data-msg="Please enter your password"
-                            className="form-control"
-                          /> */}
                           <InputField name="password" label="Password" />
                         </div>
                         <div className="form-group mb-4">

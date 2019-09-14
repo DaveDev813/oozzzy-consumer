@@ -86,7 +86,6 @@ const Banner: React.FC<any> = (): ReactElement => (
                     <InputLabel htmlFor="categories">Categories</InputLabel>
                     <Select
                       value=""
-                      // onChange={handleChange}
                       inputProps={{
                         name: 'categories',
                         id: 'categories',
@@ -99,24 +98,6 @@ const Banner: React.FC<any> = (): ReactElement => (
                       <MenuItem value="x-large">Garages</MenuItem>
                     </Select>
                   </FormControl>
-                  {/* <FormControl>
-                      <InputLabel htmlFor="categories">Categories</InputLabel>
-                      <Select
-                        native
-                        // value={state.age}
-                        // onChange={handleChange('age')}
-                        inputProps={{
-                          name: "age",
-                          id: "categories"
-                        }}
-                      >
-                        <option value="" />
-                        <option value="small">Restaurants</option>
-                        <option value="medium">Hotels</option>
-                        <option value="large">Cafes</option>
-                        <option value="x-large">Garages</option>
-                      </Select>
-                    </FormControl> */}
                 </div>
                 <div className="col-lg-2">
                   <button
