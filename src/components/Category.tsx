@@ -1,7 +1,7 @@
-import React, { ReactElement, useEffect } from 'react';
+import React from 'react';
 import Container from '../components/Container';
 import Row from '../components/Row';
-import Swiper from 'swiper';
+// import Swiper from 'swiper';
 import Avatar from '../components/Avatar';
 
 import {
@@ -12,34 +12,23 @@ import {
   CardText,
 } from '../components/Card';
 
-const Category: React.FC<any> = (): ReactElement => {
-  useEffect(() => {
-    Object.assign(
-      {},
-      new Swiper('#swiper1', {
-        speed: 400,
-        setWrapperSize: true,
-        slidesPerView: 4,
-      })
-    );
+const Category = () => {
+  // useEffect(() => {
+  //   const swiper1 = new Swiper("#swiper1", {
+  //     speed: 400,
+  //     setWrapperSize: true,
+  //     slidesPerView: 4
+  //   });
 
-    Object.assign(
-      {},
-      new Swiper('#swiper2', {
-        speed: 400,
-        setWrapperSize: true,
-        slidesPerView: 3,
-        roundLengths: true,
-      })
-    );
-  }, []);
+  //   const swiper2 = new Swiper("#swiper2", {
+  //     speed: 400,
+  //     setWrapperSize: true,
+  //     slidesPerView: 3,
+  //     roundLengths: true
+  //   });
+  // }, []);
 
-  interface Item {
-    place: string;
-    text: string;
-  }
-
-  const CardData = (): Item[] => {
+  const CardData = () => {
     return [
       {
         place: 'new_york',
@@ -78,14 +67,14 @@ const Category: React.FC<any> = (): ReactElement => {
         <Row>
           <div id="swiper1" className="swiper-container guides-slider">
             <div className="swiper-wrapper pb-5">
-              {CardData().map((dataInfo: any, index: any) => {
+              {CardData().map((dataInfo, index) => {
                 // const active = index == 0 ? "swiper-slide-active" : "";
                 return (
                   <div key={index} className={`swiper-slide h-auto px-2`}>
                     <Card>
                       <CardTile href="category.html" />
                       <Avatar
-                        src={`img/photo/${dataInfo.place}.jpg`}
+                        src={` photo/${dataInfo.place}.jpg`}
                         alt="Card image"
                         className="bg-image"
                       />
