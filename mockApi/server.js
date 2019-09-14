@@ -13,6 +13,10 @@ router.render = (req, res) => {
         accessToken: 'FakeAccessToken',
       });
       break;
+    default:
+      res.jsonp({
+        ...res.locals.data,
+      });
   }
 };
 
