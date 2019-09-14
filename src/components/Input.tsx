@@ -1,104 +1,53 @@
-import React from "react";
-import FormControl from "@material-ui/core/FormControl";
-import FormHelperText from "@material-ui/core/FormHelperText";
-import Input, { InputProps } from "@material-ui/core/Input";
-import InputLabel from "@material-ui/core/InputLabel";
-import { Field } from "formik";
-import { FormControlLabel, Checkbox, withStyles } from "@material-ui/core";
-import { FormControlLabelProps } from "@material-ui/core/FormControlLabel";
-import InputBase from "@material-ui/core/InputBase";
-import { fade } from "@material-ui/core/styles";
+import { Field, FieldProps } from 'formik';
+import React, { ReactElement } from 'react';
+import {
+  FormControl,
+  FormHelperText,
+  InputLabel,
+  Input,
+} from '@material-ui/core';
+import { styled } from '@material-ui/styles';
+import { InputProps } from '@material-ui/core/Input';
 
-const BootstrapInput = withStyles(theme => ({
-  root: {
-    "label + &": {
-      marginTop: theme.spacing(3)
-    }
-  },
-  input: {
-    borderRadius: 4,
-    position: "relative",
-    backgroundColor: theme.palette.common.white,
-    border: "1px solid #ced4da",
-    fontSize: 16,
-    width: "auto",
-    padding: "10px 12px",
-    transition: theme.transitions.create(["border-color", "box-shadow"]),
-    // Use the system font instead of the default Roboto font.
-    fontFamily: [
-      "-apple-system",
-      "BlinkMacSystemFont",
-      '"Segoe UI"',
-      "Roboto",
-      '"Helvetica Neue"',
-      "Arial",
-      "sans-serif",
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"'
-    ].join(","),
-    "&:focus": {
-      boxShadow: `${fade(theme.palette.primary.main, 0.25)} 0 0 0 0.2rem`,
-      borderColor: theme.palette.primary.main
-    }
-  }
-}))(InputBase);
+/**
+ * Formik field wrapper
+ */
 
-export const InputField: React.FC<
-  InputProps & { name: string; label?: string; value?: string }
-> = ({ type, name, label, value, ...props }) => {
-  return (
-    <Field
-      name={name}
-      render={({ form: { errors, handleChange } }: any) => {
-        const hasError = errors[name] ? true : false;
-        const withValue = value ? { value, ...props } : { ...props };
-        return (
-          <FormControl error={hasError} fullWidth>
-            <label htmlFor={name} className="form-label">
-              {label ? label : name}
-            </label>
-            <input
-              name={name}
-              id={`${name}`}
-              type={type ? type : "input"}
-              // placeholder={label}
-              autoComplete="off"
-              className="form-control"
-              onChange={handleChange}
-            />
-            {errors[name] && (
-              <FormHelperText id="component-error-text">
-                {errors[name]}
-              </FormHelperText>
-            )}
-          </FormControl>
-        );
-      }}
-    />
-  );
+type InputFieldProps = InputProps & {
+  name: string;
+  label?: string;
 };
 
-export const CheckBox: React.FC<
-  Partial<FormControlLabelProps> & { name: string; label?: string }
-> = ({ name, label }) => {
+const StyledLabel = styled(InputLabel)({
+  textTransform: 'capitalize',
+});
+export const InputField: React.FC<InputFieldProps> = ({
+  type,
+  name,
+  label,
+  ...props
+}: InputFieldProps): ReactElement => {
   return (
     <Field
       name={name}
-      render={({ form: { errors, handleChange } }: any) => {
+      render={({
+        form: { errors, handleChange },
+      }: FieldProps): ReactElement => {
         const hasError = errors[name] ? true : false;
         return (
-          <FormControl error={hasError} fullWidth>
-            <FormControlLabel
+          <FormControl error={hasError} fullWidth={true}>
+            <StyledLabel htmlFor={name}>{label ? label : name}</StyledLabel>
+            <Input
+              {...props}
+              name={name}
+              id={name}
               onChange={handleChange}
-              control={<Checkbox color="secondary" name="terms" value="" />}
-              label={label ? label : name}
+              type={type ? type : 'input'}
+              fullWidth={true}
+              autoFocus={true}
             />
-            {errors[name] && (
-              <FormHelperText
-                id="component-error-text"
-                style={{ marginTop: "-5px" }}
-              >
+            {hasError && (
+              <FormHelperText id="component-error-text">
                 {errors[name]}
               </FormHelperText>
             )}

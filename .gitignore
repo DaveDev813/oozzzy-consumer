@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/mockApi/node_modules
 /.pnp
 .pnp.js
 
@@ -21,6 +22,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-/.next
-/src/static/sampleTemplate/distribution
-/src/.next
+
+public/distribution

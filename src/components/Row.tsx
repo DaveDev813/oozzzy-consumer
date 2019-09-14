@@ -1,4 +1,4 @@
-const Row = props => {
+const Row = (props: any) => {
   return <div className={`row ${props.className}`}>{props.children}</div>;
 };
 

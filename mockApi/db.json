@@ -1,0 +1,123 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "connection": {
+    "testdata": "hello?"
+  },
+  "users": [
+    {
+      "email": "email@email.com",
+      "password": "password"
+    },
+    {
+      "email": "howo@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "id": "jyortpzi"
+    },
+    {
+      "id": "jyorvjek",
+      "email": "xaxo@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "jyorvo2d",
+      "email": "xaxo@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "jyorwixa",
+      "email": "xaxo@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "jytxjqwg",
+      "email": "ropiviro@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "jytxjyy8",
+      "email": "ropiviro@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "jytxjzct",
+      "email": "ropiviro@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "jytxjzhx",
+      "email": "ropiviro@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "jytxjzmd",
+      "email": "ropiviro@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "jytxjzr2",
+      "email": "ropiviro@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "jytxjzva",
+      "email": "ropiviro@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "jytxjzzt",
+      "email": "ropiviro@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "jytxk04d",
+      "email": "ropiviro@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "jytxk0gl",
+      "email": "ropiviro@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "jytxk0v3",
+      "email": "ropiviro@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "jytxk166",
+      "email": "ropiviro@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "jytxk1if",
+      "email": "ropiviro@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "jytxk1v5",
+      "email": "ropiviro@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "jytxk28j",
+      "email": "ropiviro@mailinator.com",
+      "password": "Pa$$w0rd!"
+    }
+  ]
+}

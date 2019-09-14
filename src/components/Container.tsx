@@ -1,3 +1,5 @@
-const Container = props => <div className="container">{props.children}</div>;
+const Container = (props: any) => (
+  <div className="container">{props.children}</div>
+);
 
 export default Container;

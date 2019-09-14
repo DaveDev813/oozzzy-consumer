@@ -1,0 +1,20 @@
+{
+  "name": "mockapi",
+  "version": "0.0.1",
+  "description": "mock api for davedev-boilerplate-web",
+  "main": "index.js",
+  "scripts": {
+    "server": "node server.js"
+  },
+  "keywords": [
+    "mock",
+    "api",
+    "gulp"
+  ],
+  "author": "Rodave Joseph bobadilla",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "json-server": "^0.15.0"
+  }
+}
