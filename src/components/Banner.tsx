@@ -1,9 +1,9 @@
 import React, { ReactElement } from 'react';
-import Row from '../components/Row';
-import Container from '../components/Container';
+// import Row from '../components/Row';
+// import Container from '../components/Container';
 import {
   InputLabel,
-  InputBase,
+  // InputBase,
   FormControl,
   Select,
   MenuItem,
@@ -16,35 +16,35 @@ const Banner: React.FC<any> = (): ReactElement => (
         <div
           style={{
             backgroundImage:
-              'url(\' img/photo/photo-1501621965065-c6e1cf6b53e2.jpg\')',
+              'url(img/photo/photo-1501621965065-c6e1cf6b53e2.jpg)',
           }}
           className="swiper-slide"
         />
         <div
           style={{
             backgroundImage:
-              'url(\' img/photo/photo-1519974719765-e6559eac2575.jpg\')',
+              'url(img/photo/photo-1519974719765-e6559eac2575.jpg)',
           }}
           className="swiper-slide"
         />
         <div
           style={{
             backgroundImage:
-              'url(\' img/photo/photo-1490578474895-699cd4e2cf59.jpg\')',
+              'url(img/photo/photo-1490578474895-699cd4e2cf59.jpg)',
           }}
           className="swiper-slide"
         />
         <div
           style={{
             backgroundImage:
-              'url(\' img/photo/photo-1534850336045-c6c6d287f89e.jpg\')',
+              'url(img/photo/photo-1534850336045-c6c6d287f89e.jpg)',
           }}
           className="swiper-slide"
         />
       </div>
     </div>
-    <Container className="py-6 py-md-7 text-white z-index-20">
-      <Row>
+    <div className="container py-6 py-md-7 text-white z-index-20">
+      <div className="row">
         <div className="col-xl-10">
           <div className="text-center text-lg-left">
             <p className="subtitle letter-spacing-4 mb-2 text-secondary text-shadow">
@@ -56,23 +56,22 @@ const Banner: React.FC<any> = (): ReactElement => (
           </div>
           <div className="search-bar mt-5 p-3 p-lg-1 pl-lg-4">
             <form action="#">
-              <Row>
+              <div className="row">
                 <div className="col-lg-4 d-flex align-items-center form-group">
-                  <InputBase
+                  <input
                     type="text"
                     name="search"
                     placeholder="What are you searching for?"
                     className="form-control border-0 shadow-0"
                   />
-                  >
                 </div>
                 <div className="col-lg-3 d-flex align-items-center form-group">
                   <div className="input-label-absolute input-label-absolute-right w-100">
-                    <InputLabel htmlFor="location" className="label-absolute">
+                    <label htmlFor="location" className="label-absolute">
                       <i className="fa fa-crosshairs" />
                       <span className="sr-only">City</span>
-                    </InputLabel>
-                    <InputBase
+                    </label>
+                    <input
                       type="text"
                       name="location"
                       placeholder="Location"
@@ -107,12 +106,12 @@ const Banner: React.FC<any> = (): ReactElement => (
                     Search{' '}
                   </button>
                 </div>
-              </Row>
+              </div>
             </form>
           </div>
         </div>
-      </Row>
-    </Container>
+      </div>
+    </div>
   </section>
 );
 
