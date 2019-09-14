@@ -1,5 +1,3 @@
-![Rodave Joseph Bobadilla](https://github.com/DaveDev813/davedev-boilerplate-web/blob/master/src/components/assets/images/appbanner.png)
-
 ## Technologies Involved
 
 - TypeScript - https://www.typescriptlang.org/
@@ -16,12 +14,12 @@ In the project directory, you can run:
 
 ### `npm run lint:ts`
 
-Check for linting errors 
+Check for linting errors
 
 ### `npm run mock:server`
 
-This will run a mock API endpoint on localhost:3030 
-See mockApi/db.json for all the data 
+This will run a mock API endpoint on localhost:3030
+See mockApi/db.json for all the data
 
 ### `npm start`
 
@@ -55,9 +53,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-
-
- 
-
-
