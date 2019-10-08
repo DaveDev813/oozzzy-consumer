@@ -2,7 +2,7 @@ const jsonServer = require('json-server');
 const server = jsonServer.create({
   noCors: true,
 });
-const router = jsonServer.router('./mockApi/db.json');
+const router = jsonServer.router('./db.json');
 const middlewares = jsonServer.defaults();
 
 router.render = (req, res) => {

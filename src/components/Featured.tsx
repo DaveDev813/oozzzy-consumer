@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useState, useEffect } from 'react';
 import Row from '../components/Row';
 import Container from '../components/Container';
 import {
@@ -11,7 +11,10 @@ import {
 } from '../components/Card';
 import Avatar from '../components/Avatar';
 import Rate from '../components/Rate';
-
+import API, { ApiResponse } from '../utils/api';
+import _ from 'lodash';
+import Swiper from 'swiper';
+import SnackbarNotif, { SnackbarVariant } from './Snackbar';
 interface Item {
   user: {
     src: string;
@@ -24,86 +27,54 @@ interface Item {
     };
   };
 }
-const CardData2 = (): Item[] => {
-  return [
-    {
-      user: {
-        src: ' img/avatar/avatar-0.jpg',
-        name: 'Pamela',
-        room: {
-          description: 'Modern, Well Appointed Room',
-          type: 'Private Room',
-          price: '$80',
-          stars: 5,
-        },
-      },
-    },
-    {
-      user: {
-        src: ' img/avatar/avatar-7.jpg',
-        name: 'John',
-        room: {
-          description: 'Cute Quirky Garden apt, NYC adjacent',
-          type: 'Entire apartment',
-          price: '$121',
-          stars: 4,
-        },
-      },
-    },
-    {
-      user: {
-        src: ' img/avatar/avatar-8.jpg',
-        name: 'Julie',
-        room: {
-          description: 'Modern Apt - Vibrant Neighborhood!',
-          type: 'Entire apartment',
-          price: '$75',
-          stars: 3,
-        },
-      },
-    },
-    {
-      user: {
-        src: ' img/avatar/avatar-9.jpg',
-        name: 'Barbora',
-        room: {
-          description: 'Sunny Private Studio-Apartment',
-          type: 'Shared Room',
-          price: '$93',
-          stars: 4,
-        },
-      },
-    },
-    {
-      user: {
-        src: ' img/avatar/avatar-10.jpg',
-        name: 'Jack',
-        room: {
-          description: 'Mid-Century Modern Garden Paradise',
-          type: 'Entire house',
-          price: '$115',
-          stars: 5,
-        },
-      },
-    },
-    {
-      user: {
-        src: ' img/avatar/avatar-11.jpg',
-        name: 'Stuart',
-        room: {
-          description: 'Brooklyn Life, Easy to Manhattan',
-          type: 'Private Room',
-          price: '$123',
-          stars: 4,
-        },
-      },
-    },
-  ];
-};
 
 const Featured: React.FC<any> = (): ReactElement => {
+  const [cardData, setcardData] = useState<Item[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasNotif, setHasNotif] = React.useState({
+    isOpen: false,
+    message: 'placeholder',
+    variant: SnackbarVariant.SUCCESS,
+  });
+  useEffect(() => {
+    const fetchFeaturedData = async (): Promise<void> => {
+      const featuredData: ApiResponse = await API.get('/featured');
+
+      if (featuredData.error) {
+        setHasNotif({
+          isOpen: true,
+          variant: SnackbarVariant.ERROR,
+          message: 'Error: Please connect to API',
+        });
+      }
+      setcardData(_.values(featuredData.data));
+      setIsLoading(false);
+    };
+
+    fetchFeaturedData().then((): void => {
+      Object.assign(
+        {},
+        new Swiper('#swiper2', {
+          speed: 400,
+          setWrapperSize: true,
+          slidesPerView: 3,
+          roundLengths: true,
+        })
+      );
+    });
+  }, [setcardData, isLoading]);
   return (
     <section className="py-6 bg-gray-100">
+      <SnackbarNotif
+        onCloseSnackbar={(): void =>
+          setHasNotif({
+            isOpen: false,
+            variant: hasNotif.variant,
+            message: '',
+          })
+        }
+        {...hasNotif}
+      />
       <Container>
         <Row className="mb-5">
           <div className="col-md-8">
@@ -124,7 +95,7 @@ const Featured: React.FC<any> = (): ReactElement => {
           className="swiper-container swiper-container-mx-negative swiper-init"
         >
           <div className="swiper-wrapper pb-5">
-            {CardData2().map((details: any, index: any) => {
+            {cardData.map((details: any, index: any) => {
               return (
                 <div key={index} className="swiper-slide h-auto px-2">
                   {/* <!-- place item--> */}

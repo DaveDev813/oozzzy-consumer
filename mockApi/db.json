@@ -47,5 +47,79 @@
       "password": "Pa$$w0rd!",
       "id": "jyortpzi"
     }
+  ],
+  "featured": [
+    {
+      "user": {
+        "src": " img/avatar/avatar-0.jpg",
+        "name": "Pamela",
+        "room": {
+          "description": "Modern, Well Appointed Room",
+          "type": "Private Room",
+          "price": "$80",
+          "stars": 5
+        }
+      }
+    },
+    {
+      "user": {
+        "src": " img/avatar/avatar-7.jpg",
+        "name": "John",
+        "room": {
+          "description": "Cute Quirky Garden apt, NYC adjacent",
+          "type": "Entire apartment",
+          "price": "$121",
+          "stars": 4
+        }
+      }
+    },
+    {
+      "user": {
+        "src": " img/avatar/avatar-8.jpg",
+        "name": "Julie",
+        "room": {
+          "description": "Modern Apt - Vibrant Neighborhood!",
+          "type": "Entire apartment",
+          "price": "$75",
+          "stars": 3
+        }
+      }
+    },
+    {
+      "user": {
+        "src": " img/avatar/avatar-9.jpg",
+        "name": "Barbora",
+        "room": {
+          "description": "Sunny Private Studio-Apartment",
+          "type": "Shared Room",
+          "price": "$93",
+          "stars": 4
+        }
+      }
+    },
+    {
+      "user": {
+        "src": " img/avatar/avatar-10.jpg",
+        "name": "Jack",
+        "room": {
+          "description": "Mid-Century Modern Garden Paradise",
+          "type": "Entire house",
+          "price": "$115",
+          "stars": 5
+        }
+      }
+    },
+    {
+      "user": {
+        "src": " img/avatar/avatar-11.jpg",
+        "name": "Stuart",
+        "room": {
+          "description": "Brooklyn Life, Easy to Manhattan",
+          "type": "Private Room",
+          "price": "$123",
+          "stars": 4
+        }
+      }
+    }
   ]
 }
