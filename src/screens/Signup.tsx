@@ -1,20 +1,21 @@
-import React, { ReactElement } from 'react';
-import { FormikActions } from 'formik';
+import React from "react";
+import { FormikActions } from "formik";
+// import Router from "next/router";
+// import Api from "../service/api";
+import SigninSignupContainer from "../components/signinSignup/SigninSignupContainer";
 
-import SigninSignupContainer from '../components/signinSignup/SigninSignupContainer';
-
-class Login extends React.Component<any> {
+class Login extends React.Component {
   public onSubmit = async (values: any, actions: FormikActions<any>) => {
-    // const test = await Api.post('/client/signin', {
+    // const test = await Api.post("/client/signin", {
     //   email: values.username,
-    //   password: values.password,
+    //   password: values.password
     // });
-    // console.log('Testing response', await test.json());
-    actions.setSubmitting(false);
+    // console.log("Testing response", await test.json());
+    // actions.setSubmitting(false);
     // Router.push(`/`);
   };
 
-  render(): ReactElement {
+  render() {
     return (
       <React.Fragment>
         <SigninSignupContainer>
@@ -22,7 +23,7 @@ class Login extends React.Component<any> {
             <img
               src="../static/sampleTemplate/distribution/pages/img/logo-square.svg"
               alt="..."
-              style={{ maxWidth: '4rem' }}
+              style={{ maxWidth: "4rem" }}
               className="img-fluid mb-3"
             />
             <h2>Sign up</h2>
@@ -43,7 +44,7 @@ class Login extends React.Component<any> {
                 type="email"
                 placeholder="name@address.com"
                 autoComplete="off"
-                required={true}
+                required
                 data-msg="Please enter your email"
                 className="form-control"
               />
@@ -57,7 +58,7 @@ class Login extends React.Component<any> {
                 id="loginPassword"
                 placeholder="Password"
                 type="password"
-                required={true}
+                required
                 data-msg="Please enter your password"
                 className="form-control"
               />
@@ -71,7 +72,7 @@ class Login extends React.Component<any> {
                 id="loginPassword2"
                 placeholder="Password"
                 type="password"
-                required={true}
+                required
                 data-msg="Please enter your password"
                 className="form-control"
               />
@@ -81,23 +82,23 @@ class Login extends React.Component<any> {
             </button>
             <hr data-content="OR" className="my-3 hr-text letter-spacing-2" />
             <button className="btn btn btn-outline-primary btn-block btn-social mb-3">
-              <i className="fa-2x fa-facebook-f fab btn-social-icon" />
+              <i className="fa-2x fa-facebook-f fab btn-social-icon"> </i>
               Connect <span className="d-none d-sm-inline">with Facebook</span>
             </button>
             <button className="btn btn btn-outline-muted btn-block btn-social mb-3">
-              <i className="fa-2x fa-google fab btn-social-icon" />
+              <i className="fa-2x fa-google fab btn-social-icon"> </i>
               Connect <span className="d-none d-sm-inline">with Google</span>
             </button>
             <hr className="my-4" />
             <p className="text-sm text-muted">
-              By signing up you agree to Directory's{' '}
-              <a href="#">Terms and Conditions</a> and{' '}
+              By signing up you agree to Directory's{" "}
+              <a href="#">Terms and Conditions</a> and{" "}
               <a href="#">Privacy Policy</a>.
             </p>
           </form>
           <a href="index.html" className="close-absolute mr-md-5 mr-xl-6 pt-5">
             <svg className="svg-icon w-3rem h-3rem">
-              <use xlinkHref="#close-1" />
+              <use xlinkHref="#close-1"> </use>
             </svg>
           </a>
         </SigninSignupContainer>
