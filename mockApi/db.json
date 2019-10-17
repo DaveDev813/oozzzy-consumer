@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "connection": {
+    "testdata": "hello?"
+  },
+  "categories": [
+    {
+      "place": "new_york",
+      "text": "The Big Apple"
+    },
+    {
+      "place": "paris",
+      "text": "Artist capital oF Europe"
+    },
+    {
+      "place": "barcelona",
+      "text": "Dali, Gaudi, Barrio Gotico"
+    },
+    {
+      "place": "prague",
+      "text": "City of hundred towers"
+    }
+  ],
+  "users": [
+    {
+      "email": "email@email.com",
+      "password": "password"
+    },
+    {
+      "email": "howo@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "id": "jyortpzi"
+    }
+  ]
+}

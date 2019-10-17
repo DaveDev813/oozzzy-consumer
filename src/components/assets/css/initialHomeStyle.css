@@ -1,0 +1,63 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+.logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  border-radius: 50%;
+  width: 3.2em;
+  height: 3.2em;
+  font-size: 1.2rem;
+  background-color: #61dafb;
+}
+.logo span {
+  content: '';
+  width: 175%;
+  height: 450%;
+  background-color: transparent;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: shadow 1s linear infinite;
+}
+.logo span:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(35deg);
+}
+.logo span:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(-35deg);
+  animation-delay: -0.66s;
+}
+.logo span:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(90deg);
+  animation-delay: -0.33s;
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: 0.6em -0.6em 0 0 #61dafb;
+  }
+  25% {
+    box-shadow: 0.6em 0.6em 0 0 #61dafb;
+  }
+  50% {
+    box-shadow: -0.6em 0.6em 0 0 #61dafb;
+  }
+  75% {
+    box-shadow: -0.6em -0.6em 0 0 #61dafb;
+  }
+  100% {
+    box-shadow: 0.6em -0.6em 0 0 #61dafb;
+  }
+}
