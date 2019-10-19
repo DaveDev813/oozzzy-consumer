@@ -4,7 +4,7 @@ import { FormikActions } from 'formik';
 import SigninSignupContainer from '../components/signinSignup/SigninSignupContainer';
 
 class Login extends React.Component<any> {
-  public onSubmit = async (values: any, actions: FormikActions<any>) => {
+  public onSubmit = async (values: any, actions: FormikActions<any>): Promise<void> => {
     // const test = await Api.post('/client/signin', {
     //   email: values.username,
     //   password: values.password,

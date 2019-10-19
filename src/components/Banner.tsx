@@ -89,8 +89,7 @@ const Banner: React.FC<any> = (): ReactElement => (
                         name: 'categories',
                         id: 'categories',
                       }}
-                      style={{ width: 220 }}
-                    >
+                      style={{ width: 220 }}>
                       <MenuItem value="small">Restaurants</MenuItem>
                       <MenuItem value="medium">Hotels</MenuItem>
                       <MenuItem value="large">Cafes</MenuItem>
@@ -101,8 +100,7 @@ const Banner: React.FC<any> = (): ReactElement => (
                 <div className="col-lg-2">
                   <button
                     type="submit"
-                    className="btn btn-primary btn-block rounded-xl h-100"
-                  >
+                    className="btn btn-primary btn-block rounded-xl h-100">
                     Search{' '}
                   </button>
                 </div>

@@ -79,8 +79,7 @@ const InitialHome: React.FC = (): ReactElement => {
         container={true}
         justify="center"
         alignItems="center"
-        direction="column"
-      >
+        direction="column">
         <Grid item={true} sm={12}>
           <Avatar
             alt="Rodave Bobadilla"
@@ -93,12 +92,10 @@ const InitialHome: React.FC = (): ReactElement => {
             className={classes.header}
             variant="h2"
             component="h1"
-            gutterBottom={true}
-          >
+            gutterBottom={true}>
             <Link
               href="https://github.com/DaveDev813/davedev-boilerplate-web"
-              className={classes.header}
-            >
+              className={classes.header}>
               DaveDev Boilerplate | Web
             </Link>
           </Typography>

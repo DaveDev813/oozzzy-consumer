@@ -43,8 +43,7 @@ const Search: React.FC<any> = (props: any): ReactElement => {
                       id="form_neighbourhood"
                       data-style="btn-selectpicker"
                       // title={true}
-                      className="selectpicker  form-control"
-                    >
+                      className="selectpicker  form-control">
                       <option value="neighbourhood_0">
                         Battery Park City{'{'}' '{'}'}
                       </option>
@@ -65,8 +64,7 @@ const Search: React.FC<any> = (props: any): ReactElement => {
                       id="form_category"
                       data-style="btn-selectpicker"
                       // title={true}
-                      className="selectpicker  form-control"
-                    >
+                      className="selectpicker  form-control">
                       <option value="category_0">Hipster </option>
                       <option value="category_1">Music club </option>
                       <option value="category_2">Bar </option>
@@ -96,8 +94,7 @@ const Search: React.FC<any> = (props: any): ReactElement => {
                     id="form_sort"
                     data-style="btn-selectpicker"
                     // title={true}
-                    className="selectpicker"
-                  >
+                    className="selectpicker">
                     <option value="sortBy_0">Most popular </option>
                     <option value="sortBy_1">Recommended </option>
                     <option value="sortBy_2">Newest </option>
@@ -109,14 +106,12 @@ const Search: React.FC<any> = (props: any): ReactElement => {
               <div className="row">
                 <div
                   data-marker-id="59c0c8e33b1527bfe2abaf92"
-                  className="col-sm-6 col-xl-4 mb-5"
-                >
+                  className="col-sm-6 col-xl-4 mb-5">
                   <div className="card h-100 border-0 shadow">
                     <div className="card h-100 border-0 shadow">
                       <div
                         style={{}}
-                        className="card-img-top overflow-hidden dark-overlay bg-cover"
-                      >
+                        className="card-img-top overflow-hidden dark-overlay bg-cover">
                         <a href="detail.html" className="tile-link">
                           <div className="card-img-overlay-bottom z-index-20">
                             <h4 className="text-white text-shadow">
@@ -195,8 +190,7 @@ const Search: React.FC<any> = (props: any): ReactElement => {
                             <div className="card-body">
                               <a
                                 href="javascript: void();"
-                                className="card-fav-icon position-relative z-index-40"
-                              >
+                                className="card-fav-icon position-relative z-index-40">
                                 <p className="text-sm text-muted mb-3">
                                   {'{'}' '{'}'}
                                   Cupidatat excepteur non dolore laborum et quis
@@ -207,8 +201,7 @@ const Search: React.FC<any> = (props: any): ReactElement => {
                               <p className="text-sm text-muted text-uppercase mb-1">
                                 <a
                                   href="javascript: void();"
-                                  className="card-fav-icon position-relative z-index-40"
-                                >
+                                  className="card-fav-icon position-relative z-index-40">
                                   By{'{'}' '{'}'}
                                 </a>
                                 <a href="#" className="text-dark">
@@ -243,14 +236,12 @@ const Search: React.FC<any> = (props: any): ReactElement => {
                       <i className="fa fa-star text-gray-300">
                         <div
                           data-marker-id="59c0c8e33b1527bfe2abaf92"
-                          className="col-sm-6 col-xl-4 mb-5"
-                        >
+                          className="col-sm-6 col-xl-4 mb-5">
                           <div className="card h-100 border-0 shadow">
                             <div className="card h-100 border-0 shadow">
                               <div
                                 style={{}}
-                                className="card-img-top overflow-hidden dark-overlay bg-cover"
-                              >
+                                className="card-img-top overflow-hidden dark-overlay bg-cover">
                                 <a href="detail.html" className="tile-link">
                                   <div className="card-img-overlay-bottom z-index-20">
                                     <h4 className="text-white text-shadow">
@@ -289,8 +280,7 @@ const Search: React.FC<any> = (props: any): ReactElement => {
                                       <div className="card-img-overlay-top d-flex justify-content-between align-items-center">
                                         <a
                                           href="detail.html"
-                                          className="tile-link"
-                                        >
+                                          className="tile-link">
                                           <div className="badge badge-transparent badge-pill px-3 py-2">
                                             Restaurants
                                           </div>
@@ -332,8 +322,7 @@ const Search: React.FC<any> = (props: any): ReactElement => {
                                     <div className="card-body">
                                       <a
                                         href="javascript: void();"
-                                        className="card-fav-icon position-relative z-index-40"
-                                      >
+                                        className="card-fav-icon position-relative z-index-40">
                                         <p className="text-sm text-muted mb-3">
                                           {'{'}' '{'}'}
                                           Cupidatat excepteur non dolore laborum
@@ -345,8 +334,7 @@ const Search: React.FC<any> = (props: any): ReactElement => {
                                       <p className="text-sm text-muted text-uppercase mb-1">
                                         <a
                                           href="javascript: void();"
-                                          className="card-fav-icon position-relative z-index-40"
-                                        >
+                                          className="card-fav-icon position-relative z-index-40">
                                           By{'{'}' '{'}'}
                                         </a>
                                         <a href="#" className="text-dark">
@@ -381,18 +369,15 @@ const Search: React.FC<any> = (props: any): ReactElement => {
                               <i className="fa fa-star text-gray-300">
                                 <div
                                   data-marker-id="59c0c8e33b1527bfe2abaf92"
-                                  className="col-sm-6 col-xl-4 mb-5"
-                                >
+                                  className="col-sm-6 col-xl-4 mb-5">
                                   <div className="card h-100 border-0 shadow">
                                     <div className="card h-100 border-0 shadow">
                                       <div
                                         style={{}}
-                                        className="card-img-top overflow-hidden dark-overlay bg-cover"
-                                      >
+                                        className="card-img-top overflow-hidden dark-overlay bg-cover">
                                         <a
                                           href="detail.html"
-                                          className="tile-link"
-                                        >
+                                          className="tile-link">
                                           <div className="card-img-overlay-bottom z-index-20">
                                             <h4 className="text-white text-shadow">
                                               Blue Hill
@@ -430,8 +415,7 @@ const Search: React.FC<any> = (props: any): ReactElement => {
                                               <div className="card-img-overlay-top d-flex justify-content-between align-items-center">
                                                 <a
                                                   href="detail.html"
-                                                  className="tile-link"
-                                                >
+                                                  className="tile-link">
                                                   <div className="badge badge-transparent badge-pill px-3 py-2">
                                                     Restaurants
                                                   </div>
@@ -473,8 +457,7 @@ const Search: React.FC<any> = (props: any): ReactElement => {
                                             <div className="card-body">
                                               <a
                                                 href="javascript: void();"
-                                                className="card-fav-icon position-relative z-index-40"
-                                              >
+                                                className="card-fav-icon position-relative z-index-40">
                                                 <p className="text-sm text-muted mb-3">
                                                   {'{'}' '{'}'}
                                                   Cupidatat excepteur non dolore
@@ -487,14 +470,12 @@ const Search: React.FC<any> = (props: any): ReactElement => {
                                               <p className="text-sm text-muted text-uppercase mb-1">
                                                 <a
                                                   href="javascript: void();"
-                                                  className="card-fav-icon position-relative z-index-40"
-                                                >
+                                                  className="card-fav-icon position-relative z-index-40">
                                                   By{'{'}' '{'}'}
                                                 </a>
                                                 <a
                                                   href="#"
-                                                  className="text-dark"
-                                                >
+                                                  className="text-dark">
                                                   Matt Damon
                                                 </a>
                                               </p>
@@ -526,18 +507,15 @@ const Search: React.FC<any> = (props: any): ReactElement => {
                                       <i className="fa fa-star text-gray-300">
                                         <div
                                           data-marker-id="59c0c8e33b1527bfe2abaf92"
-                                          className="col-sm-6 col-xl-4 mb-5"
-                                        >
+                                          className="col-sm-6 col-xl-4 mb-5">
                                           <div className="card h-100 border-0 shadow">
                                             <div className="card h-100 border-0 shadow">
                                               <div
                                                 style={{}}
-                                                className="card-img-top overflow-hidden dark-overlay bg-cover"
-                                              >
+                                                className="card-img-top overflow-hidden dark-overlay bg-cover">
                                                 <a
                                                   href="detail.html"
-                                                  className="tile-link"
-                                                >
+                                                  className="tile-link">
                                                   <div className="card-img-overlay-bottom z-index-20">
                                                     <h4 className="text-white text-shadow">
                                                       Blue Hill
@@ -575,8 +553,7 @@ const Search: React.FC<any> = (props: any): ReactElement => {
                                                       <div className="card-img-overlay-top d-flex justify-content-between align-items-center">
                                                         <a
                                                           href="detail.html"
-                                                          className="tile-link"
-                                                        >
+                                                          className="tile-link">
                                                           <div className="badge badge-transparent badge-pill px-3 py-2">
                                                             Restaurants
                                                           </div>
@@ -618,8 +595,7 @@ const Search: React.FC<any> = (props: any): ReactElement => {
                                                     <div className="card-body">
                                                       <a
                                                         href="javascript: void();"
-                                                        className="card-fav-icon position-relative z-index-40"
-                                                      >
+                                                        className="card-fav-icon position-relative z-index-40">
                                                         <p className="text-sm text-muted mb-3">
                                                           {'{'}' '{'}'}
                                                           Cupidatat excepteur
@@ -633,28 +609,24 @@ const Search: React.FC<any> = (props: any): ReactElement => {
                                                       <p className="text-sm text-muted text-uppercase mb-1">
                                                         <a
                                                           href="javascript: void();"
-                                                          className="card-fav-icon position-relative z-index-40"
-                                                        >
+                                                          className="card-fav-icon position-relative z-index-40">
                                                           By{'{'}' '{'}'}
                                                         </a>
                                                         <a
                                                           href="#"
-                                                          className="text-dark"
-                                                        >
+                                                          className="text-dark">
                                                           Matt Damon
                                                         </a>
                                                       </p>
                                                       <p className="text-sm mb-0">
                                                         <a
                                                           href="#"
-                                                          className="mr-1"
-                                                        >
+                                                          className="mr-1">
                                                           Restaurant,
                                                         </a>
                                                         <a
                                                           href="#"
-                                                          className="mr-1"
-                                                        >
+                                                          className="mr-1">
                                                           Contemporary
                                                         </a>
                                                       </p>

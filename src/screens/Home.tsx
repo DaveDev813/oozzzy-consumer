@@ -109,8 +109,7 @@ const Home: React.FC = (): ReactElement => {
                       <select
                         title="Categories"
                         data-style="btn-form-control"
-                        className="selectpicker"
-                      >
+                        className="selectpicker">
                         <option value="small">Restaurants</option>
                         <option value="medium">Hotels</option>
                         <option value="large">Cafes</option>
@@ -120,8 +119,7 @@ const Home: React.FC = (): ReactElement => {
                     <div className="col-lg-2">
                       <button
                         type="submit"
-                        className="btn btn-primary btn-block rounded-xl h-100"
-                      >
+                        className="btn btn-primary btn-block rounded-xl h-100">
                         Search{' '}
                       </button>
                     </div>
@@ -300,8 +298,7 @@ const Home: React.FC = (): ReactElement => {
           {/* Slider main container*/}
           <div
             // data-swiper="{\"slidesPerView\":4,\"spaceBetween\":20,\"loop\":true,\"roundLengths\":true,\"breakpoints\":{\"1200\":{\"slidesPerView\":3},\"991\":{\"slidesPerView\":2},\"565\":{\"slidesPerView\":1}},\"pagination\":{\"el\":\".swiper-pagination\",\"clickable\":true,\"dynamicBullets\":true}}"
-            className="swiper-container swiper-container-mx-negative swiper-init"
-          >
+            className="swiper-container swiper-container-mx-negative swiper-init">
             {/* Additional required wrapper*/}
             <div className="swiper-wrapper pb-5">
               {/* Slides*/}
@@ -309,8 +306,7 @@ const Home: React.FC = (): ReactElement => {
                 {/* place item*/}
                 <div
                   data-marker-id="59c0c8e33b1527bfe2abaf92"
-                  className="w-100 h-100"
-                >
+                  className="w-100 h-100">
                   <div className="card h-100 border-0 shadow">
                     <div className="card-img-top overflow-hidden gradient-overlay">
                       {' '}
@@ -333,8 +329,7 @@ const Home: React.FC = (): ReactElement => {
                       <div className="card-img-overlay-top text-right">
                         <a
                           href="#"
-                          className="card-fav-icon position-relative z-index-40"
-                        >
+                          className="card-fav-icon position-relative z-index-40">
                           <svg className="svg-icon text-white">
                             <use xlinkHref="#heart-1" />
                           </svg>
@@ -346,8 +341,7 @@ const Home: React.FC = (): ReactElement => {
                         <h6 className="card-title">
                           <a
                             href="detail-rooms.html"
-                            className="text-decoration-none text-dark"
-                          >
+                            className="text-decoration-none text-dark">
                             Modern, Well-Appointed Room
                           </a>
                         </h6>
@@ -375,8 +369,7 @@ const Home: React.FC = (): ReactElement => {
                 {/* place item*/}
                 <div
                   data-marker-id="59c0c8e322f3375db4d89128"
-                  className="w-100 h-100"
-                >
+                  className="w-100 h-100">
                   <div className="card h-100 border-0 shadow">
                     <div className="card-img-top overflow-hidden gradient-overlay">
                       {' '}
@@ -399,8 +392,7 @@ const Home: React.FC = (): ReactElement => {
                       <div className="card-img-overlay-top text-right">
                         <a
                           href="#"
-                          className="card-fav-icon position-relative z-index-40"
-                        >
+                          className="card-fav-icon position-relative z-index-40">
                           <svg className="svg-icon text-white">
                             <use xlinkHref="#heart-1" />
                           </svg>
@@ -412,8 +404,7 @@ const Home: React.FC = (): ReactElement => {
                         <h6 className="card-title">
                           <a
                             href="detail-rooms.html"
-                            className="text-decoration-none text-dark"
-                          >
+                            className="text-decoration-none text-dark">
                             Cute Quirky Garden apt, NYC adjacent
                           </a>
                         </h6>
@@ -442,8 +433,7 @@ const Home: React.FC = (): ReactElement => {
                 {/* place item*/}
                 <div
                   data-marker-id="59c0c8e3a31e62979bf147c9"
-                  className="w-100 h-100"
-                >
+                  className="w-100 h-100">
                   <div className="card h-100 border-0 shadow">
                     <div className="card-img-top overflow-hidden gradient-overlay">
                       {' '}
@@ -466,8 +456,7 @@ const Home: React.FC = (): ReactElement => {
                       <div className="card-img-overlay-top text-right">
                         <a
                           href="#"
-                          className="card-fav-icon position-relative z-index-40"
-                        >
+                          className="card-fav-icon position-relative z-index-40">
                           <svg className="svg-icon text-white">
                             <use xlinkHref="#heart-1" />
                           </svg>
@@ -479,8 +468,7 @@ const Home: React.FC = (): ReactElement => {
                         <h6 className="card-title">
                           <a
                             href="detail-rooms.html"
-                            className="text-decoration-none text-dark"
-                          >
+                            className="text-decoration-none text-dark">
                             Modern Apt - Vibrant Neighborhood!
                           </a>
                         </h6>
@@ -508,8 +496,7 @@ const Home: React.FC = (): ReactElement => {
                 {/* place item*/}
                 <div
                   data-marker-id="59c0c8e3503eb77d487e8082"
-                  className="w-100 h-100"
-                >
+                  className="w-100 h-100">
                   <div className="card h-100 border-0 shadow">
                     <div className="card-img-top overflow-hidden gradient-overlay">
                       {' '}
@@ -532,8 +519,7 @@ const Home: React.FC = (): ReactElement => {
                       <div className="card-img-overlay-top text-right">
                         <a
                           href="#"
-                          className="card-fav-icon position-relative z-index-40"
-                        >
+                          className="card-fav-icon position-relative z-index-40">
                           <svg className="svg-icon text-white">
                             <use xlinkHref="#heart-1" />
                           </svg>
@@ -545,8 +531,7 @@ const Home: React.FC = (): ReactElement => {
                         <h6 className="card-title">
                           <a
                             href="detail-rooms.html"
-                            className="text-decoration-none text-dark"
-                          >
+                            className="text-decoration-none text-dark">
                             Sunny Private Studio-Apartment
                           </a>
                         </h6>
@@ -574,8 +559,7 @@ const Home: React.FC = (): ReactElement => {
                 {/* place item*/}
                 <div
                   data-marker-id="59c0c8e39aa2eed0626e485d"
-                  className="w-100 h-100"
-                >
+                  className="w-100 h-100">
                   <div className="card h-100 border-0 shadow">
                     <div className="card-img-top overflow-hidden gradient-overlay">
                       {' '}
@@ -598,8 +582,7 @@ const Home: React.FC = (): ReactElement => {
                       <div className="card-img-overlay-top text-right">
                         <a
                           href="#"
-                          className="card-fav-icon position-relative z-index-40"
-                        >
+                          className="card-fav-icon position-relative z-index-40">
                           <svg className="svg-icon text-white">
                             <use xlinkHref="#heart-1" />
                           </svg>
@@ -611,8 +594,7 @@ const Home: React.FC = (): ReactElement => {
                         <h6 className="card-title">
                           <a
                             href="detail-rooms.html"
-                            className="text-decoration-none text-dark"
-                          >
+                            className="text-decoration-none text-dark">
                             Mid-Century Modern Garden Paradise
                           </a>
                         </h6>
@@ -641,8 +623,7 @@ const Home: React.FC = (): ReactElement => {
                 {/* place item*/}
                 <div
                   data-marker-id="59c0c8e39aa2edasd626e485d"
-                  className="w-100 h-100"
-                >
+                  className="w-100 h-100">
                   <div className="card h-100 border-0 shadow">
                     <div className="card-img-top overflow-hidden gradient-overlay">
                       {' '}
@@ -665,8 +646,7 @@ const Home: React.FC = (): ReactElement => {
                       <div className="card-img-overlay-top text-right">
                         <a
                           href="#"
-                          className="card-fav-icon position-relative z-index-40"
-                        >
+                          className="card-fav-icon position-relative z-index-40">
                           <svg className="svg-icon text-white">
                             <use xlinkHref="#heart-1" />
                           </svg>
@@ -678,8 +658,7 @@ const Home: React.FC = (): ReactElement => {
                         <h6 className="card-title">
                           <a
                             href="detail-rooms.html"
-                            className="text-decoration-none text-dark"
-                          >
+                            className="text-decoration-none text-dark">
                             Brooklyn Life, Easy to Manhattan
                           </a>
                         </h6>
@@ -906,8 +885,7 @@ const Home: React.FC = (): ReactElement => {
                 <div className="card-body">
                   <a
                     href="#"
-                    className="text-uppercase text-muted text-sm letter-spacing-2"
-                  >
+                    className="text-uppercase text-muted text-sm letter-spacing-2">
                     Travel{' '}
                   </a>
                   <h5 className="my-2">
@@ -943,8 +921,7 @@ const Home: React.FC = (): ReactElement => {
                 <div className="card-body">
                   <a
                     href="#"
-                    className="text-uppercase text-muted text-sm letter-spacing-2"
-                  >
+                    className="text-uppercase text-muted text-sm letter-spacing-2">
                     Living{' '}
                   </a>
                   <h5 className="my-2">
@@ -980,8 +957,7 @@ const Home: React.FC = (): ReactElement => {
                 <div className="card-body">
                   <a
                     href="#"
-                    className="text-uppercase text-muted text-sm letter-spacing-2"
-                  >
+                    className="text-uppercase text-muted text-sm letter-spacing-2">
                     Travel{' '}
                   </a>
                   <h5 className="my-2">
@@ -1159,8 +1135,7 @@ const Home: React.FC = (): ReactElement => {
                       href="#"
                       target="_blank"
                       title="twitter"
-                      className="text-muted text-hover-primary"
-                    >
+                      className="text-muted text-hover-primary">
                       <i className="fab fa-twitter" />
                     </a>
                   </li>
@@ -1169,8 +1144,7 @@ const Home: React.FC = (): ReactElement => {
                       href="#"
                       target="_blank"
                       title="facebook"
-                      className="text-muted text-hover-primary"
-                    >
+                      className="text-muted text-hover-primary">
                       <i className="fab fa-facebook" />
                     </a>
                   </li>
@@ -1179,8 +1153,7 @@ const Home: React.FC = (): ReactElement => {
                       href="#"
                       target="_blank"
                       title="instagram"
-                      className="text-muted text-hover-primary"
-                    >
+                      className="text-muted text-hover-primary">
                       <i className="fab fa-instagram" />
                     </a>
                   </li>
@@ -1189,8 +1162,7 @@ const Home: React.FC = (): ReactElement => {
                       href="#"
                       target="_blank"
                       title="pinterest"
-                      className="text-muted text-hover-primary"
-                    >
+                      className="text-muted text-hover-primary">
                       <i className="fab fa-pinterest" />
                     </a>
                   </li>
@@ -1199,8 +1171,7 @@ const Home: React.FC = (): ReactElement => {
                       href="#"
                       target="_blank"
                       title="vimeo"
-                      className="text-muted text-hover-primary"
-                    >
+                      className="text-muted text-hover-primary">
                       <i className="fab fa-vimeo" />
                     </a>
                   </li>
@@ -1286,8 +1257,7 @@ const Home: React.FC = (): ReactElement => {
                     <div className="input-group-append">
                       <button
                         type="submit"
-                        className="btn btn-outline-dark border-left-0"
-                      >
+                        className="btn btn-outline-dark border-left-0">
                         {' '}
                         <i className="fa fa-paper-plane text-lg" />
                       </button>

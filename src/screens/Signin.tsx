@@ -86,8 +86,7 @@ const SignIn: React.FC = (): ReactElement => {
             initialValues={{ email: '', password: '' }}
             validationSchema={validationSchema}
             validateOnChange={true}
-            onSubmit={onSubmit}
-          >
+            onSubmit={onSubmit}>
             {({
               handleSubmit,
               isSubmitting,
@@ -97,8 +96,7 @@ const SignIn: React.FC = (): ReactElement => {
                 <form
                   className={classes.form}
                   noValidate={true}
-                  onSubmit={handleSubmit}
-                >
+                  onSubmit={handleSubmit}>
                   <Grid container={true} direction="column" spacing={2}>
                     <Grid item={true}>
                       <InputField name="email" label="Email" />
@@ -128,8 +126,7 @@ const SignIn: React.FC = (): ReactElement => {
                                 fullWidth={true}
                                 variant="contained"
                                 color="secondary"
-                                disabled={isSubmitting}
-                              >
+                                disabled={isSubmitting}>
                                 Sign up
                               </Button>
                             </Grid>
@@ -139,8 +136,7 @@ const SignIn: React.FC = (): ReactElement => {
                                 fullWidth={true}
                                 variant="contained"
                                 color="primary"
-                                disabled={isSubmitting}
-                              >
+                                disabled={isSubmitting}>
                                 Sign In
                               </Button>
                             </Grid>

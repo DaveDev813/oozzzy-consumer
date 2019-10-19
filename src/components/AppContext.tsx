@@ -59,8 +59,7 @@ const SetAppContextProvider: React.FunctionComponent<
       value={{
         store: state,
         actions,
-      }}
-    >
+      }}>
       {props.children}
     </MainAppContext.Provider>
   );

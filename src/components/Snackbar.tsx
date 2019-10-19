@@ -84,8 +84,7 @@ const SnackbarContentWrapper = (
           key="close"
           aria-label="close"
           color="inherit"
-          onClick={onClose}
-        >
+          onClick={onClose}>
           <CloseIcon className={classes.icon} />
         </IconButton>,
       ]}
@@ -121,8 +120,7 @@ const SnackbarNotif = ({
       }}
       open={open}
       autoHideDuration={6000}
-      onClose={handleClose}
-    >
+      onClose={handleClose}>
       <SnackbarContentWrapper onClose={handleClose} {...props} />
     </Snackbar>
   );

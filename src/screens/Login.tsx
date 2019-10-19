@@ -16,7 +16,7 @@ const LoginSchema = Yup.object().shape({
 });
 
 class Login extends React.Component {
-  public onSubmit = async (values: any, actions: FormikActions<any>) => {
+  public onSubmit = async (values: any, actions: FormikActions<any>): Promise<void> => {
     console.log('bayag');
     // const test = await Api.post('/client/signin', {
     //   email: values.username,
@@ -50,9 +50,8 @@ class Login extends React.Component {
                   }}
                   validationSchema={LoginSchema}
                   validateOnChange={true}
-                  onSubmit={this.onSubmit}
-                >
-                  {({ handleSubmit }: any) => {
+                  onSubmit={this.onSubmit}>
+                  {({ handleSubmit }: any): any => {
                     return (
                       <form className="form-validate" onSubmit={handleSubmit}>
                         <div className="form-group">
@@ -84,8 +83,7 @@ class Login extends React.Component {
                             />
                             <label
                               htmlFor="loginRemember"
-                              className="custom-control-label text-muted"
-                            >
+                              className="custom-control-label text-muted">
                               <span className="text-sm">
                                 Remember me for 30 days
                               </span>
@@ -95,8 +93,7 @@ class Login extends React.Component {
 
                         <button
                           type="submit"
-                          className="btn btn-lg btn-block btn-primary"
-                        >
+                          className="btn btn-lg btn-block btn-primary">
                           Sign in
                         </button>
                         <hr
@@ -104,14 +101,13 @@ class Login extends React.Component {
                           className="my-3 hr-text letter-spacing-2"
                         />
                         <button
-                          onClick={async () => {
+                          onClick={async (): Promise<void> => {
                             // TESTING SIGNOUT
                             // const test = await Api.post('/client/signout');
 
                             console.log('test', test);
                           }}
-                          className="btn btn btn-outline-primary btn-block btn-social mb-3"
-                        >
+                          className="btn btn btn-outline-primary btn-block btn-social mb-3">
                           <i className="fa-2x fa-facebook-f fab btn-social-icon">
                             {' '}
                           </i>

@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react';
 export const SvgUse: React.FC<{ hrefVal: string; className: string }> = ({
   hrefVal,
   className,
-}: any) => {
+}: any): ReactElement => {
   const useTag = `<use xlink:href="${hrefVal}" />`;
   return (
     <svg className={className} dangerouslySetInnerHTML={{ __html: useTag }} />
@@ -153,63 +153,61 @@ const BasicCollapse: React.FC<BasicCollapseType> = ({
         <li
           className={`nav-item ${
             type !== HeaderCollapse.SINGLE ? 'dropdown' : ''
-          }`}
-        >
+            }`}>
           {type === HeaderCollapse.SINGLE ? (
             // <Link href={link}>
             <a className="nav-link">{title}</a>
           ) : (
-            // </Link>
-            <React.Fragment>
-              <a
-                id={itemId}
-                href={link ? link : '#'}
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                className={`nav-link dropdown-toggle ${
-                  isActive ? 'active' : ''
-                }`}
-              >
-                {title}
-              </a>
+              // </Link>
+              <React.Fragment>
+                <a
+                  id={itemId}
+                  href={link ? link : '#'}
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  className={`nav-link dropdown-toggle ${
+                    isActive ? 'active' : ''
+                    }`}>
+                  {title}
+                </a>
 
-              {section && type === HeaderCollapse.NORMAL && (
-                <div aria-labelledby={itemId} className="dropdown-menu">
-                  {section.map(
-                    ({ header, items }: HeaderSection, index: number) => (
-                      <React.Fragment key={index + 'headerSection'}>
-                        {header && (
-                          <React.Fragment>
-                            {index !== 0 && (
-                              <div className="dropdown-divider" />
-                            )}
-                            <h6 className="dropdown-header font-weight-normal">
-                              {header}
-                            </h6>
-                          </React.Fragment>
-                        )}
-                        {items.map(
-                          (
-                            { title, link, isEnabled }: HeaderItems,
-                            index: number
-                          ) => (
-                            <React.Fragment key={index + 'headerItems'}>
-                              {isEnabled && (
-                                <a href={link} className="dropdown-item">
-                                  {title}
-                                </a>
+                {section && type === HeaderCollapse.NORMAL && (
+                  <div aria-labelledby={itemId} className="dropdown-menu">
+                    {section.map(
+                      ({ header, items }: HeaderSection, index: number) => (
+                        <React.Fragment key={index + 'headerSection'}>
+                          {header && (
+                            <React.Fragment>
+                              {index !== 0 && (
+                                <div className="dropdown-divider" />
                               )}
+                              <h6 className="dropdown-header font-weight-normal">
+                                {header}
+                              </h6>
                             </React.Fragment>
-                          )
-                        )}
-                      </React.Fragment>
-                    )
-                  )}
-                </div>
-              )}
-            </React.Fragment>
-          )}
+                          )}
+                          {items.map(
+                            (
+                              { title, link, isEnabled }: HeaderItems,
+                              index: number
+                            ) => (
+                                <React.Fragment key={index + 'headerItems'}>
+                                  {isEnabled && (
+                                    <a href={link} className="dropdown-item">
+                                      {title}
+                                    </a>
+                                  )}
+                                </React.Fragment>
+                              )
+                          )}
+                        </React.Fragment>
+                      )
+                    )}
+                  </div>
+                )}
+              </React.Fragment>
+            )}
         </li>
       )}
     </React.Fragment>
@@ -251,8 +249,7 @@ const NavBar = (): ReactElement => (
           aria-controls="navbarCollapse"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          className="navbar-toggler navbar-toggler-right"
-        >
+          className="navbar-toggler navbar-toggler-right">
           <i className="fa fa-bars" />
         </button>
 
@@ -260,13 +257,11 @@ const NavBar = (): ReactElement => (
           <form
             action="#"
             id="searchcollapsed"
-            className="form-inline mt-4 mb-2 d-sm-none"
-          >
+            className="form-inline mt-4 mb-2 d-sm-none">
             <div className="input-label-absolute input-label-absolute-left input-reset w-100">
               <label
                 htmlFor="searchcollapsed_search"
-                className="label-absolute"
-              >
+                className="label-absolute">
                 <i className="fa fa-search" />
                 <span className="sr-only">What are you looking for?</span>
               </label>
@@ -299,7 +294,7 @@ const NavBar = (): ReactElement => (
   </header>
 );
 
-const FullDrop: React.FC = () => (
+const FullDrop: React.FC = (): ReactElement => (
   <li className="nav-item dropdown position-static">
     <a href="#" data-toggle="dropdown" className="nav-link dropdown-toggle">
       Template
@@ -358,16 +353,14 @@ const FullDrop: React.FC = () => (
                 <li className="megamenu-list-item">
                   <a
                     href="category-2-rooms.html"
-                    className="megamenu-list-link"
-                  >
+                    className="megamenu-list-link">
                     Category - Map on the right{' '}
                   </a>
                 </li>
                 <li className="megamenu-list-item">
                   <a
                     href="category-3-rooms.html"
-                    className="megamenu-list-link"
-                  >
+                    className="megamenu-list-link">
                     Category - no map{' '}
                   </a>
                 </li>
@@ -450,8 +443,7 @@ const FullDrop: React.FC = () => (
                 <li className="megamenu-list-item">
                   <a
                     href="user-booking-detail.html"
-                    className="megamenu-list-link"
-                  >
+                    className="megamenu-list-link">
                     Booking detail{' '}
                     <span className="badge badge-warning ml-1">New</span>{' '}
                   </a>
@@ -542,7 +534,7 @@ const FullDrop: React.FC = () => (
   </li>
 );
 
-const withLayout = (Comp: any) => {
+const withLayout = (Comp: any): any => {
   return (): ReactElement => (
     <div>
       <NavBar />
