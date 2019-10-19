@@ -3,7 +3,7 @@ import {
   makeStyles,
   Typography,
   Grid,
-  // Avatar,
+  Avatar,
   Link,
   Snackbar,
   Slide,
@@ -82,11 +82,11 @@ const InitialHome: React.FC = (): ReactElement => {
         direction="column"
       >
         <Grid item={true} sm={12}>
-          {/* <Avatar
+          <Avatar
             alt="Rodave Bobadilla"
-            src={avatarImg}
+            src="img/avatar-0.jpg"
             className={classes.avatar}
-          /> */}
+          />
         </Grid>
         <Grid item={true} sm={12}>
           <Typography

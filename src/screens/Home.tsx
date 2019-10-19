@@ -332,7 +332,7 @@ const Home: React.FC = (): ReactElement => {
                       </div>
                       <div className="card-img-overlay-top text-right">
                         <a
-                          href="javascript: void();"
+                          href="#"
                           className="card-fav-icon position-relative z-index-40"
                         >
                           <svg className="svg-icon text-white">
@@ -398,7 +398,7 @@ const Home: React.FC = (): ReactElement => {
                       </div>
                       <div className="card-img-overlay-top text-right">
                         <a
-                          href="javascript: void();"
+                          href="#"
                           className="card-fav-icon position-relative z-index-40"
                         >
                           <svg className="svg-icon text-white">
@@ -465,7 +465,7 @@ const Home: React.FC = (): ReactElement => {
                       </div>
                       <div className="card-img-overlay-top text-right">
                         <a
-                          href="javascript: void();"
+                          href="#"
                           className="card-fav-icon position-relative z-index-40"
                         >
                           <svg className="svg-icon text-white">
@@ -531,7 +531,7 @@ const Home: React.FC = (): ReactElement => {
                       </div>
                       <div className="card-img-overlay-top text-right">
                         <a
-                          href="javascript: void();"
+                          href="#"
                           className="card-fav-icon position-relative z-index-40"
                         >
                           <svg className="svg-icon text-white">
@@ -597,7 +597,7 @@ const Home: React.FC = (): ReactElement => {
                       </div>
                       <div className="card-img-overlay-top text-right">
                         <a
-                          href="javascript: void();"
+                          href="#"
                           className="card-fav-icon position-relative z-index-40"
                         >
                           <svg className="svg-icon text-white">
@@ -664,7 +664,7 @@ const Home: React.FC = (): ReactElement => {
                       </div>
                       <div className="card-img-overlay-top text-right">
                         <a
-                          href="javascript: void();"
+                          href="#"
                           className="card-fav-icon position-relative z-index-40"
                         >
                           <svg className="svg-icon text-white">

@@ -17,6 +17,7 @@ import { CardData } from '../interfaces';
 import API, { ApiResponse } from '../utils/api';
 import _ from 'lodash';
 import SnackbarNotif, { SnackbarVariant } from './Snackbar';
+import { Skeleton } from '@material-ui/lab';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -64,9 +65,6 @@ const Category: React.FC<any> = (): ReactElement => {
 
   return (
     <React.Fragment>
-      {isLoading ? (
-        <CircularProgress className={classes.progress} />
-      ) : (
         <div className="mainContainerTest">
           <SnackbarNotif
             onCloseSnackbar={(): void =>
@@ -80,6 +78,10 @@ const Category: React.FC<any> = (): ReactElement => {
           />
           <section className="py-6 bg-white">
             <Container>
+            {isLoading ? (
+              <CircularProgress className={classes.progress} />
+            ) : (
+              <>
               <Row className="mb-5">
                 <div className="col-md-8">
                   <p className="subtitle text-primary">
@@ -95,35 +97,54 @@ const Category: React.FC<any> = (): ReactElement => {
                 </div>
               </Row>
               <Row>
+
                 <div id="swiper1" className="swiper-container guides-slider">
                   <div className="swiper-wrapper pb-5">
-                    {cardData.map((dataInfo: any, index: any) => {
-                      return (
-                        <div key={index} className={`swiper-slide h-auto px-2`}>
-                          <Card>
-                            <CardTile href="category.html" />
-                            <Avatar
-                              src={`img/photo/${dataInfo.place}.jpg`}
-                              alt="Card image"
-                              className="bg-image"
-                            />
-                            <CardBody className="overlay-content">
-                              <CardTitle className="text-shadow text-uppercase">
-                                {dataInfo.place}
-                              </CardTitle>
-                              <CardText size="sm">{dataInfo.text}</CardText>
-                            </CardBody>
-                          </Card>
-                        </div>
-                      );
-                    })}
+
+                      <div className={`swiper-slide h-auto px-2`}>
+                        <Skeleton variant="rect" width={180} height={500} />
+                        <Skeleton variant="rect" width={180} height={500} />
+                        <Skeleton variant="rect" width={180} height={500} />
+                      </div>
+                      {cardData.length === 0 ?
+                        <div className={`swiper-slide h-auto px-2`}>
+                          <Skeleton variant="rect" width={180} height={500} />
+                          <Skeleton variant="rect" width={180} height={500} />
+                          <Skeleton variant="rect" width={180} height={500} />
+                        </div> :
+
+                        cardData.map((dataInfo: any, index: any) => {
+                          return (
+                            <div key={index} className={`swiper-slide h-auto px-2`}>
+                              <Card>
+                                <CardTile href="category.html" />
+                                <Avatar
+                                  src={`img/photo/${dataInfo.place}.jpg`}
+                                  alt="Card image"
+                                  className="bg-image"
+                                />
+                                <CardBody className="overlay-content">
+                                  <CardTitle className="text-shadow text-uppercase">
+                                    {dataInfo.place}
+                                  </CardTitle>
+                                  <CardText size="sm">{dataInfo.text}</CardText>
+                                </CardBody>
+                              </Card>
+                            </div>
+                          );
+                        })
+                      }
+
+                    {}
                   </div>
                 </div>
               </Row>
+              </>
+              )}
+
             </Container>
           </section>
         </div>
-      )}
     </React.Fragment>
   );
 };

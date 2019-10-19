@@ -15,6 +15,7 @@ import API, { ApiResponse } from '../utils/api';
 import _ from 'lodash';
 import Swiper from 'swiper';
 import SnackbarNotif, { SnackbarVariant } from './Snackbar';
+import { CircularProgress } from '@material-ui/core';
 interface Item {
   user: {
     src: string;
@@ -76,6 +77,9 @@ const Featured: React.FC<any> = (): ReactElement => {
         {...hasNotif}
       />
       <Container>
+      {isLoading
+      ? <CircularProgress />
+      : <>
         <Row className="mb-5">
           <div className="col-md-8">
             <p className="subtitle text-secondary">
@@ -133,7 +137,7 @@ const Featured: React.FC<any> = (): ReactElement => {
                           className="text-right"
                         >
                           <a
-                            href="javascript: void();"
+                            href="#"
                             className="card-fav-icon position-relative z-index-40"
                           >
                             HEART
@@ -180,6 +184,8 @@ const Featured: React.FC<any> = (): ReactElement => {
             <div className="swiper-pagination2" />
           </div>
         </div>
+        </>
+      }
       </Container>
     </section>
   );
