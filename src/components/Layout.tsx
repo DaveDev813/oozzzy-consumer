@@ -220,7 +220,7 @@ const NavBar = (): ReactElement => (
       <div className="container-fluid">
         <div className="d-flex align-items-center">
           <a href="index.html" className="navbar-brand py-1">
-            <img src=" distribution/pages/img/logo.svg" alt="Directory logo" />
+            <img src="img/logo.svg" alt="Directory logo" />
           </a>
 
           <form action="#" id="search" className="form-inline d-none d-sm-flex">
@@ -524,7 +524,7 @@ const FullDrop: React.FC = (): ReactElement => (
 
         <div className="col-lg-3 d-none d-lg-block">
           <img
-            src=" distribution/pages/img/photo/photo-1521170665346-3f21e2291d8b.jpg"
+            src="img/photo/photo-1521170665346-3f21e2291d8b.jpg"
             alt=""
             className="bg-image"
           />

@@ -2,10 +2,11 @@ const path = require("path");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const miniCssExtractPlugin = require("mini-css-extract-plugin");
 const copyWebpackPlugin = require('copy-webpack-plugin');
+const forkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
   mode: "development",
-  entry: path.resolve(__dirname, 'src/index.tsx'),
+  entry: ["react-hot-loader/patch", path.resolve(__dirname, 'src/index.tsx')],
   devtool: "cheap-module-eval-source-map",
   module: {
     rules: [
@@ -18,12 +19,6 @@ module.exports = {
           "css-loader"
         ]
       },
-
-      // {
-      //   test: /\.(js|jsx)$/,
-      //   exclude: /node_modules/,
-      //   use: ["babel-loader"]
-      // },
       {
         test: /\.(png|jpeg|jpg|gif)$/i,
         loader: "file-loader",
@@ -36,17 +31,25 @@ module.exports = {
         test: /\.(ts|tsx)?$/,
         use: [
           {
-            loader: "babel-loader"
-          }
-        ]
-      },
-      {
-        test: /\.tsx?$/,
-        use: [
+            loader: "babel-loader",
+            options: {
+              presets: [
+                "@babel/preset-env",
+                "@babel/preset-typescript"
+              ],
+              plugins: [
+                "react-hot-loader/babel"
+              ]
+            }
+          },
           {
-            loader: "ts-loader"
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: true,
+            },
           }
-        ]
+        ],
+        exclude: /node_modules/
       },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,
@@ -62,7 +65,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx"]
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
   output: {
     filename: "bundle.js"
@@ -84,8 +87,9 @@ module.exports = {
       filename: "css/[name].css"
     }),
     new copyWebpackPlugin([
-      {from: path.resolve(__dirname, 'public'), to: path.resolve(__dirname, 'dist')}
-    ])
+      { from: path.resolve(__dirname, 'public'), to: path.resolve(__dirname, 'dist') }
+    ]),
+    new forkTsCheckerWebpackPlugin({ silent: true }) //TS only
   ],
   optimization: {
     splitChunks: {

@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import { hot } from 'react-hot-loader/root';
 import 'typeface-roboto';
 import { Route, Switch } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -30,4 +31,4 @@ const App: React.FC = (): ReactElement => {
   );
 };
 
-export default App;
+export default hot(App);

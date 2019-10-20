@@ -102,11 +102,7 @@ const Category: React.FC<any> = (): ReactElement => {
                     <div id="swiper1" className="swiper-container guides-slider">
                       <div className="swiper-wrapper pb-5">
 
-                        <div className={`swiper-slide h-auto px-2`}>
-                          <Skeleton variant="rect" width={180} height={500} />
-                          <Skeleton variant="rect" width={180} height={500} />
-                          <Skeleton variant="rect" width={180} height={500} />
-                        </div>
+
                         {cardData.length === 0 ?
                           <div className={`swiper-slide h-auto px-2`}>
                             <Skeleton variant="rect" width={180} height={500} />
