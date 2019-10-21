@@ -67,9 +67,10 @@ const Featured: React.FC<any> = (): ReactElement => {
         {},
         new Swiper('#swiper2', {
           speed: 400,
-          setWrapperSize: true,
           slidesPerView: 3,
           roundLengths: true,
+          spaceBetween: 20,
+          loop: true,
         })
       );
     });
@@ -96,7 +97,7 @@ const Featured: React.FC<any> = (): ReactElement => {
           </div>
         ) : (
             <>
-              <Row>
+              <Row className="mb-5">
                 <div className="col-md-8">
                   <p className="subtitle text-secondary">
                     Hurry up, these are expiring soon.{' '}
