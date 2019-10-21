@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 
 const Container: React.FC<any> = (props: any): ReactElement => (
-  <div className="container" style={{ textAlign: 'center' }}>
+  <div className="container">
     {props.children}
   </div>
 );

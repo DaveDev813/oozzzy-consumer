@@ -54,7 +54,6 @@ const Category: React.FC<any> = (): ReactElement => {
         {},
         new Swiper('#swiper1', {
           speed: 400,
-          setWrapperSize: true,
           slidesPerView: 4,
         })
       );
@@ -65,7 +64,6 @@ const Category: React.FC<any> = (): ReactElement => {
 
   return (
     <React.Fragment>
-
       <div className="mainContainerTest">
         <SnackbarNotif
           onCloseSnackbar={(): void =>
@@ -80,7 +78,9 @@ const Category: React.FC<any> = (): ReactElement => {
         <section className="py-6 bg-white">
           <Container>
             {isLoading ? (
-              <CircularProgress className={classes.progress} />
+              <div style={{ textAlign: 'center' }}>
+                <CircularProgress className={classes.progress} />
+              </div>
             ) : (
                 <>
                   <Row className="mb-5">
@@ -98,10 +98,8 @@ const Category: React.FC<any> = (): ReactElement => {
                     </div>
                   </Row>
                   <Row>
-
                     <div id="swiper1" className="swiper-container guides-slider">
                       <div className="swiper-wrapper pb-5">
-
 
                         {cardData.length === 0 ?
                           <div className={`swiper-slide h-auto px-2`}>

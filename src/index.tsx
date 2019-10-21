@@ -6,6 +6,7 @@ import './css/style.default.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
+import '../public/icons/orion-svg-sprite.svg';
 
 ReactDOM.render(
   <BrowserRouter>

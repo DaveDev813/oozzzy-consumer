@@ -51,9 +51,10 @@
   "featured": [
     {
       "user": {
-        "src": " img/avatar/avatar-0.jpg",
+        "src": "img/avatar/avatar-0.jpg",
         "name": "Pamela",
         "room": {
+          "src": "img/photo/photo-1484154218962-a197022b5858.jpg",
           "description": "Modern, Well Appointed Room",
           "type": "Private Room",
           "price": "$80",
@@ -63,9 +64,10 @@
     },
     {
       "user": {
-        "src": " img/avatar/avatar-7.jpg",
+        "src": "img/avatar/avatar-7.jpg",
         "name": "John",
         "room": {
+          "src": "img/photo/photo-1426122402199-be02db90eb90.jpg",
           "description": "Cute Quirky Garden apt, NYC adjacent",
           "type": "Entire apartment",
           "price": "$121",
@@ -75,9 +77,10 @@
     },
     {
       "user": {
-        "src": " img/avatar/avatar-8.jpg",
+        "src": "img/avatar/avatar-8.jpg",
         "name": "Julie",
         "room": {
+          "src": "img/photo/photo-1512917774080-9991f1c4c750.jpg",
           "description": "Modern Apt - Vibrant Neighborhood!",
           "type": "Entire apartment",
           "price": "$75",
@@ -87,9 +90,10 @@
     },
     {
       "user": {
-        "src": " img/avatar/avatar-9.jpg",
+        "src": "img/avatar/avatar-9.jpg",
         "name": "Barbora",
         "room": {
+          "src": "img/photo/photo-1494526585095-c41746248156.jpg",
           "description": "Sunny Private Studio-Apartment",
           "type": "Shared Room",
           "price": "$93",
@@ -99,9 +103,10 @@
     },
     {
       "user": {
-        "src": " img/avatar/avatar-10.jpg",
+        "src": "img/avatar/avatar-10.jpg",
         "name": "Jack",
         "room": {
+          "src": "img/photo/photo-1522771739844-6a9f6d5f14af.jpg",
           "description": "Mid-Century Modern Garden Paradise",
           "type": "Entire house",
           "price": "$115",
@@ -111,9 +116,10 @@
     },
     {
       "user": {
-        "src": " img/avatar/avatar-11.jpg",
+        "src": "img/avatar/avatar-11.jpg",
         "name": "Stuart",
         "room": {
+          "src": "img/photo/photo-1488805990569-3c9e1d76d51c.jpg",
           "description": "Brooklyn Life, Easy to Manhattan",
           "type": "Private Room",
           "price": "$123",

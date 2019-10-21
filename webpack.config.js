@@ -20,7 +20,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpeg|jpg|gif)$/i,
+        test: /\.(png|jpeg|jpg|gif|svg)$/i,
         loader: "file-loader",
         options: {
           outputPath: "/images/",
@@ -52,7 +52,7 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        test: /\.(png|woff|woff2|eot|ttf)$/,
         loader: 'url-loader',
         options: {
           outputPath: '/fonts/'
