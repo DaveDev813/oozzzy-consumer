@@ -127,5 +127,65 @@
         }
       }
     }
+  ],
+  "operation": [
+    {
+      "day": "Sunday",
+      "time": "8:00 am - 6:00 pm"
+    },
+    {
+      "day": "Monday",
+      "time": "8:00 am - 6:00 pm"
+    },
+    {
+      "day": "Tuesday",
+      "time": "8:00 am - 6:00 pm"
+    },
+    {
+      "day": "Wednesday",
+      "time": "8:00 am - 6:00 pm"
+    },
+    {
+      "day": "Thursday",
+      "time": "8:00 am - 6:00 pm"
+    },
+    {
+      "day": "Friday",
+      "time": "Closed"
+    },
+    {
+      "day": "Saturday",
+      "time": "Closed"
+    }
+  ],
+  "reviews": [
+    {
+      "user": {
+        "src": "img/avatar/avatar-8.jpg",
+        "name": "Padmé Amidala",
+        "review": "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections"
+      }
+    },
+    {
+      "user": {
+        "src": "img/avatar/avatar-2.jpg",
+        "name": "Luke Skywalker",
+        "review": "The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. What\"s happened to me? he thought.It wasn\"t a dream."
+      }
+    },
+    {
+      "user": {
+        "src": "img/avatar/avatar-3.jpg",
+        "name": "Princess Leia",
+        "review": "His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table."
+      }
+    },
+    {
+      "user": {
+        "src": "img/avatar/avatar-4.jpg",
+        "name": "Princess Leia",
+        "review": "His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table."
+      }
+    }
   ]
 }
