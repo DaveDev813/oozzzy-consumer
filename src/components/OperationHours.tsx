@@ -41,8 +41,11 @@ const OperationHours: React.FC = (): ReactElement => {
           message: 'Error: Please connect to API',
         });
       }
-      setOperationsData(_.values(operationsData.data));
-      setIsLoading(false);
+
+      if (operationsData.data) {
+        setOperationsData(_.values(operationsData.data));
+        setIsLoading(false);
+      }
     }
 
     fetchData().then((): void => console.log('loaded'))

@@ -28,7 +28,7 @@ const setApi = (): AxiosInstance => {
 
   ApiHandler.interceptors.request.use(
     (config: AxiosRequestConfig): AxiosRequestConfig => {
-      const headers = config.headers;
+      // const headers = config.headers;
       //TODO: Transition storage to redux
       // const bearer = storage.get('bearer');
 

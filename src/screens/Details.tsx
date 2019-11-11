@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import OperationHours from '../components/OperationHours';
-import Avatar from '../components/Avatar'
 import Review from '../components/Review';
 
 const Details: React.FC = (): ReactElement<void> => {
