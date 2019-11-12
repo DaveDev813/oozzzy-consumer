@@ -46,8 +46,11 @@ const Category: React.FC<any> = (): ReactElement => {
           message: 'Error: Please connect to API',
         });
       }
-      setCardData(_.values(cardDataFetched.data));
-      setIsLoading(false);
+
+      if (cardDataFetched.data) {
+        setCardData(_.values(cardDataFetched.data));
+        setIsLoading(false);
+      }
     };
     fetchCardData().then((): void => {
       Object.assign(
@@ -77,66 +80,51 @@ const Category: React.FC<any> = (): ReactElement => {
         />
         <section className="py-6 bg-white">
           <Container>
-            {isLoading ? (
-              <div style={{ textAlign: 'center' }}>
-                <CircularProgress className={classes.progress} />
-              </div>
-            ) : (
-                <>
-                  <Row className="mb-5">
-                    <div className="col-md-8">
-                      <p className="subtitle text-primary">
-                        Stay and eat like a local
+            <Row className="mb-5">
+              <div className="col-md-8">
+                <p className="subtitle text-primary">
+                  Stay and eat like a local
                   </p>
-                      <h2>Categories</h2>
-                    </div>
-                    <div className="col-md-4 d-lg-flex align-items-center justify-content-end">
-                      <a href="category.html" className="text-muted text-sm">
-                        See all guides
+                <h2>Categories</h2>
+              </div>
+              <div className="col-md-4 d-lg-flex align-items-center justify-content-end">
+                <a href="category.html" className="text-muted text-sm">
+                  See all guides
                     <i className="fas fa-angle-double-right ml-2" />
-                      </a>
+                </a>
+              </div>
+            </Row>
+            <Row>
+              <div id="swiper1" className="swiper-container guides-slider">
+                <div className="swiper-wrapper pb-5">
+                  {isLoading ? (
+                    <div style={{ textAlign: 'center' }}>
+                      <CircularProgress className={classes.progress} />
                     </div>
-                  </Row>
-                  <Row>
-                    <div id="swiper1" className="swiper-container guides-slider">
-                      <div className="swiper-wrapper pb-5">
-
-                        {cardData.length === 0 ?
-                          <div className={`swiper-slide h-auto px-2`}>
-                            <Skeleton variant="rect" width={180} height={500} />
-                            <Skeleton variant="rect" width={180} height={500} />
-                            <Skeleton variant="rect" width={180} height={500} />
-                          </div> :
-
-                          cardData.map((dataInfo: any, index: any) => {
-                            return (
-                              <div key={index} className={`swiper-slide h-auto px-2`}>
-                                <Card>
-                                  <CardTile href="category.html" />
-                                  <Avatar
-                                    src={`img/photo/${dataInfo.place}.jpg`}
-                                    alt="Card image"
-                                    className="bg-image"
-                                  />
-                                  <CardBody className="overlay-content">
-                                    <CardTitle className="text-shadow text-uppercase">
-                                      {dataInfo.place}
-                                    </CardTitle>
-                                    <CardText size="sm">{dataInfo.text}</CardText>
-                                  </CardBody>
-                                </Card>
-                              </div>
-                            );
-                          })
-                        }
-
-                        {}
+                  ) : cardData.map((dataInfo: any, index: any) => {
+                    return (
+                      <div key={index} className={`swiper-slide h-auto px-2`}>
+                        <Card>
+                          <CardTile href="category.html" />
+                          <Avatar
+                            src={`img/photo/${dataInfo.place}.jpg`}
+                            alt="Card image"
+                            className="bg-image"
+                          />
+                          <CardBody className="overlay-content">
+                            <CardTitle className="text-shadow text-uppercase">
+                              {dataInfo.place}
+                            </CardTitle>
+                            <CardText size="sm">{dataInfo.text}</CardText>
+                          </CardBody>
+                        </Card>
                       </div>
-                    </div>
-                  </Row>
-                </>
-              )}
-
+                    );
+                  })
+                  }
+                </div>
+              </div>
+            </Row>
           </Container>
         </section>
       </div>
