@@ -2,18 +2,24 @@ import React, { ReactElement } from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import OperationHours from '../components/OperationHours';
 import Review from '../components/Review';
+import Rate from '../components/Rate';
 
-const Details: React.FC = (): ReactElement<void> => {
+const Details: React.FC = (props: any): ReactElement<void> => {
 
+  const { user } = props.location.state;
+
+  console.log(user);
   return <>
-    <section style={{ backgroundImage: `url(${'img/photo/restaurant-1515164783716-8e6920f3e77c.jpg'})` }} className="pt-7 pb-5 d-flex align-items-end dark-overlay bg-cover">
+    <section style={{ backgroundImage: `url(${user.room.src})` }} className="pt-7 pb-5 d-flex align-items-end dark-overlay bg-cover">
       <div className="container overlay-content">
         <div className="d-flex justify-content-between align-items-start flex-column flex-lg-row align-items-lg-end">
           <div className="text-white mb-4 mb-lg-0">
-            <div className="badge badge-pill badge-transparent px-3 py-2 mb-4">Eat &amp; Drink</div>
-            <h1 className="text-shadow verified">Fifteen Restaurant & Bar</h1>
+            <div className="badge badge-pill badge-transparent px-3 py-2 mb-4">{user.name}</div>
+            <h1 className="text-shadow verified">{user.room.description}</h1>
             <p><i className="fa-map-marker-alt fas mr-2" /> 53 Broadway, Brooklyn, NY 1129</p>
-            <p className="mb-0 d-flex align-items-center"><i className="fa fa-xs fa-star text-primary" /><i className="fa fa-xs fa-star text-primary" /><i className="fa fa-xs fa-star text-primary" /><i className="fa fa-xs fa-star text-primary" /><i className="fa fa-xs fa-star text-gray-200 mr-4" />8 Reviews</p>
+            <p className="mb-0 d-flex align-items-center">
+              <Rate rate={user.room.stars} />
+              <i className="fa fa-xs fa-star text-gray-200 mr-4" />8 Reviews</p>
           </div>
           <div className="calltoactions">
             <a href="#leaveReview" className="btn btn-primary">Leave a Review</a></div>
@@ -27,7 +33,7 @@ const Details: React.FC = (): ReactElement<void> => {
           <div className="col-lg-8">
             <div className="text-block">
               <div style={{ top: 100 }} className="p-4 shadow ml-lg-4 rounded">
-                <p className="text-muted"><span className="text-primary h2">$120</span> per night</p>
+                <p className="text-muted"><span className="text-primary h2">{user.room.price}</span> per night</p>
                 <hr className="my-4" />
                 <form id="booking-form" method="get" action="#" className="form">
                   <div className="form-group">

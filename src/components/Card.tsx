@@ -1,5 +1,7 @@
 import React, { ReactElement } from 'react';
-
+import {
+  Link
+} from "react-router-dom";
 const Card = (props: any): ReactElement => (
   <div className="card card-poster gradient-overlay mb-4 mb-lg-0">
     {props.children}
@@ -30,9 +32,9 @@ const CardImg = (props: any): ReactElement => {
 };
 
 const CardTile = (props: any): ReactElement => (
-  <a {...props} className="tile-link">
+  <Link to={props.to} {...props} className="tile-link">
     {props.children}
-  </a>
+  </Link>
 );
 
 const CardText = (props: any): ReactElement => {

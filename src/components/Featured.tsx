@@ -133,7 +133,9 @@ const Featured: React.FC<any> = (): ReactElement => {
                                   alt={details.user.room.description}
                                   className="img-fluid"
                                 />
-                                <CardTile href="detail-rooms.html" />
+                                <CardTile to={{
+                                  pathname: '/details', state: details,
+                                }} />
                                 <CardImg
                                   overlay={true}
                                   position="bottom"
