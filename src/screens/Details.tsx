@@ -8,7 +8,6 @@ const Details: React.FC = (props: any): ReactElement<void> => {
 
   const { user } = props.location.state;
 
-  console.log(user);
   return <>
     <section style={{ backgroundImage: `url(${user.room.src})` }} className="pt-7 pb-5 d-flex align-items-end dark-overlay bg-cover">
       <div className="container overlay-content">

@@ -14,6 +14,51 @@ module.exports = (env) => {
     module: {
       rules: [
         {
+          test: /\.module\.s(a|c)ss$/,
+          use: [
+            {
+              loader: miniCssExtractPlugin.loader,
+              options: {
+                hmr: !isProd,
+                reloadAll: true
+              }
+            },
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true,
+                sourceMap: !isProd
+              }
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: !isProd
+              }
+            }
+          ]
+        },
+        {
+          test: /\.s(a|c)ss$/,
+          exclude: /\.module.(s(a|c)ss)$/,
+          use: [
+            {
+              loader: miniCssExtractPlugin.loader,
+              options: {
+                hmr: !isProd,
+                reloadAll: true
+              }
+            },
+            'css-loader',
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: !isProd
+              }
+            }
+          ]
+        },
+        {
           test: /\.css$/,
           use: [
             {
@@ -67,7 +112,7 @@ module.exports = (env) => {
       ]
     },
     resolve: {
-      extensions: [".ts", ".tsx", ".js", ".jsx"],
+      extensions: [".ts", ".tsx", ".js", ".jsx", ".scss"],
     },
     output: {
       filename: isProd ? "bundle.min.js" : "bundle.js",

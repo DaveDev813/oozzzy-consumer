@@ -17,7 +17,6 @@ import { CardData } from '../interfaces';
 import API, { ApiResponse } from '../utils/api';
 import _ from 'lodash';
 import SnackbarNotif, { SnackbarVariant } from './Snackbar';
-import { Skeleton } from '@material-ui/lab';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
