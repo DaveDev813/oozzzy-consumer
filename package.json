@@ -34,7 +34,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "store": "^2.0.12",
-    "swiper": "^4.5.1",
+    "swiper": "^6.5.1",
     "typeface-roboto": "0.0.75",
     "typescript": "3.5.3",
     "uniqid": "^5.0.3",
